@@ -1,0 +1,95 @@
+:root {
+  color: #171914;
+  background: #f2f0e9;
+  font-family: Inter, "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 85% 15%, rgb(218 255 72 / 48%), transparent 24rem),
+    #f2f0e9;
+}
+
+.shell {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: min(100% - 40px, 1120px);
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 72px 0;
+}
+
+.eyebrow {
+  margin: 0 0 28px;
+  color: #74766d;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+}
+
+h1 {
+  max-width: 900px;
+  margin: 0;
+  font-family: Georgia, "Yu Mincho", serif;
+  font-size: clamp(54px, 9vw, 112px);
+  font-weight: 400;
+  letter-spacing: -0.07em;
+  line-height: 0.96;
+}
+
+.lead {
+  max-width: 560px;
+  margin: 42px 0 0;
+  color: #5d6057;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 10px;
+  margin-top: 48px;
+  padding: 12px 16px;
+  border: 1px solid #cdcec5;
+  border-radius: 999px;
+  background: rgb(255 255 255 / 45%);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.status span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #9abb12;
+  box-shadow: 0 0 0 5px rgb(154 187 18 / 14%);
+}
+
+@media (max-width: 560px) {
+  .shell {
+    width: min(100% - 32px, 1120px);
+  }
+
+  h1 {
+    font-size: clamp(48px, 17vw, 72px);
+  }
+
+  .lead {
+    font-size: 14px;
+  }
+}
+
