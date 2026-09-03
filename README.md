@@ -25,6 +25,14 @@ KALPAの曲一覧を検索し、候補からランダムに一曲を選ぶため
 
 実際の曲データは`src/data/songs.ts`へ追加します。
 
+Excelから作成する場合は、`data/input/kalpa-songs.xlsx`へ曲一覧を入力して次を実行します。
+
+```bash
+npm run data:convert
+```
+
+Excelの列と入力ルールは`data/input/README.md`を参照してください。
+
 ## ローカル起動
 
 ```bash
