@@ -1,6 +1,6 @@
 import { access, mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
-import readXlsxFile from "read-excel-file/node";
+import { readSheet } from "read-excel-file/node";
 
 const EXPECTED_HEADERS = [
   "id",
@@ -105,7 +105,7 @@ async function main(): Promise<void> {
     );
   }
 
-  const rows = await readXlsxFile(inputPath);
+  const rows = await readSheet(inputPath);
 
   if (rows.length === 0) {
     throw new Error("Excelファイルにヘッダー行がありません。");
@@ -176,4 +176,3 @@ main().catch((error: unknown) => {
   console.error(message);
   process.exitCode = 1;
 });
-
