@@ -44,6 +44,7 @@ export type Song = Readonly<{
   id: string;
   title: string;
   composer: string;
+  /** この曲が追加されたパック名。 */
+  pack: string;
   levels: SongLevels;
 }>;
-

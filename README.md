@@ -6,7 +6,7 @@ KALPAの曲一覧を検索し、候補からランダムに一曲を選ぶため
 
 ## 曲データ
 
-曲は、一意なID、曲名、作曲者、譜面ごとのレベルを持ちます。
+曲は、一意なID、曲名、作曲者、追加されたパック、譜面ごとのレベルを持ちます。
 `NORMAL`、`HARD`、`COSMOS`は必須でレベル1〜20、`ASTRA`は存在する曲だけ星1〜4を指定します。
 
 ```ts
@@ -14,6 +14,7 @@ KALPAの曲一覧を検索し、候補からランダムに一曲を選ぶため
   id: "sample-song",
   title: "Sample Song",
   composer: "Sample Composer",
+  pack: "Sample Pack",
   levels: {
     NORMAL: 3,
     HARD: 8,

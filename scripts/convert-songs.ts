@@ -6,6 +6,7 @@ const EXPECTED_HEADERS = [
   "id",
   "曲名",
   "作曲者",
+  "パック",
   "NORMAL",
   "HARD",
   "COSMOS",
@@ -16,6 +17,7 @@ type ConvertedSong = {
   id: string;
   title: string;
   composer: string;
+  pack: string;
   normal: number;
   hard: number;
   cosmos: number;
@@ -75,6 +77,7 @@ function toTypeScript(songs: readonly ConvertedSong[]): string {
     id: ${JSON.stringify(song.id)},
     title: ${JSON.stringify(song.title)},
     composer: ${JSON.stringify(song.composer)},
+    pack: ${JSON.stringify(song.pack)},
     levels: {
       NORMAL: ${song.normal},
       HARD: ${song.hard},
@@ -117,6 +120,17 @@ async function main(): Promise<void> {
     EXPECTED_HEADERS.every((header, index) => actualHeaders[index] === header);
 
   if (!headersMatch) {
+    const isLegacyLayout =
+      actualHeaders.length === EXPECTED_HEADERS.length - 1 &&
+      actualHeaders.join("|") ===
+        ["id", "曲名", "作曲者", "NORMAL", "HARD", "COSMOS", "ASTRA"].join("|");
+
+    if (isLegacyLayout) {
+      throw new Error(
+        "ExcelのD列へ「パック」を挿入してください。NORMAL以降は1列右へ移動します。",
+      );
+    }
+
     throw new Error(
       `1行目の列名が正しくありません。次の順番にしてください:\n${EXPECTED_HEADERS.join(", ")}`,
     );
@@ -136,10 +150,11 @@ async function main(): Promise<void> {
     const id = readRequiredText(row[0], "id", rowNumber, errors);
     const title = readRequiredText(row[1], "曲名", rowNumber, errors);
     const composer = readRequiredText(row[2], "作曲者", rowNumber, errors);
-    const normal = readInteger(row[3], "NORMAL", rowNumber, 1, 20, errors);
-    const hard = readInteger(row[4], "HARD", rowNumber, 1, 20, errors);
-    const cosmos = readInteger(row[5], "COSMOS", rowNumber, 1, 20, errors);
-    const astra = readInteger(row[6], "ASTRA", rowNumber, 1, 4, errors, true);
+    const pack = readRequiredText(row[3], "パック", rowNumber, errors);
+    const normal = readInteger(row[4], "NORMAL", rowNumber, 1, 20, errors);
+    const hard = readInteger(row[5], "HARD", rowNumber, 1, 20, errors);
+    const cosmos = readInteger(row[6], "COSMOS", rowNumber, 1, 20, errors);
+    const astra = readInteger(row[7], "ASTRA", rowNumber, 1, 4, errors, true);
 
     if (id && !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(id)) {
       errors.push(
@@ -152,8 +167,8 @@ async function main(): Promise<void> {
     }
     usedIds.add(id);
 
-    if (id && title && composer && normal && hard && cosmos) {
-      songs.push({ id, title, composer, normal, hard, cosmos, astra });
+    if (id && title && composer && pack && normal && hard && cosmos) {
+      songs.push({ id, title, composer, pack, normal, hard, cosmos, astra });
     }
   });
 
