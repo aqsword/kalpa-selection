@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
+    "test": "tsx --test src/selection.test.ts",
     "data:convert": "tsx scripts/convert-songs.ts"
   },
   "dependencies": {
