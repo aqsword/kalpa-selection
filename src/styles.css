@@ -367,11 +367,18 @@ select:focus-visible {
   font-size: 10px;
 }
 
-.selection-count-control {
+.draw-settings {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: -12px 0 14px;
+  gap: 18px;
+}
+
+.selection-count-control {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   color: #aaa;
   font-size: 10px;
   font-weight: 600;
@@ -404,7 +411,71 @@ select:focus-visible {
   color: var(--ink);
 }
 
+.selection-count-control button:disabled,
+.animation-toggle:has(input:disabled) {
+  cursor: wait;
+}
+
+.animation-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #aaa;
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.animation-toggle input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.toggle-track {
+  position: relative;
+  width: 32px;
+  height: 17px;
+  border: 1px solid #555;
+  border-radius: 999px;
+  background: #2b2b2b;
+}
+
+.toggle-track span {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #777;
+  transition: 160ms ease;
+}
+
+.animation-toggle input:checked + .toggle-track {
+  border-color: var(--acid);
+}
+
+.animation-toggle input:checked + .toggle-track span {
+  background: var(--acid);
+  transform: translateX(15px);
+}
+
+.animation-toggle input:focus-visible + .toggle-track {
+  outline: 3px solid #9db920;
+  outline-offset: 3px;
+}
+
+.animation-toggle strong {
+  min-width: 20px;
+  color: #ddd;
+  font-size: 9px;
+}
+
 .selection-display {
+  position: relative;
   display: flex;
   flex: 1;
   min-height: 285px;
@@ -414,6 +485,7 @@ select:focus-visible {
   padding: 28px;
   border: 1px solid #3e3e3e;
   text-align: center;
+  overflow: hidden;
 }
 
 .selection-display > p:last-child {
@@ -497,6 +569,56 @@ select:focus-visible {
   color: #aaa;
   font-size: 9px;
   text-align: center;
+}
+
+.selection-display.is-shuffling .selection-results {
+  animation: shuffle-jitter 95ms steps(2, end) infinite;
+  filter: blur(0.35px);
+}
+
+.selection-display.is-shuffling::after {
+  position: absolute;
+  z-index: 2;
+  top: -30%;
+  right: 0;
+  left: 0;
+  height: 28%;
+  background: linear-gradient(transparent, rgb(217 255 67 / 15%), transparent);
+  content: "";
+  animation: shuffle-scan 420ms linear infinite;
+  pointer-events: none;
+}
+
+.selection-display.is-revealing .selection-result {
+  opacity: 0;
+  transform: translateY(12px);
+  animation: reveal-result 340ms cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.selection-display.is-revealing .result-index-2 {
+  animation-delay: 140ms;
+}
+
+.selection-display.is-revealing .result-index-3 {
+  animation-delay: 280ms;
+}
+
+@keyframes shuffle-jitter {
+  0% { transform: translateX(-2px); opacity: 0.58; }
+  50% { transform: translateX(2px); opacity: 0.88; }
+  100% { transform: translateX(0); opacity: 0.65; }
+}
+
+@keyframes shuffle-scan {
+  from { transform: translateY(0); }
+  to { transform: translateY(465%); }
+}
+
+@keyframes reveal-result {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .selection-kicker {
@@ -822,6 +944,16 @@ footer {
     padding: 25px 20px;
   }
 
+  .draw-settings {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .selection-count-control {
+    width: 100%;
+    justify-content: space-between;
+  }
+
   .two-column-fields {
     grid-template-columns: 1fr;
   }
@@ -864,5 +996,6 @@ footer {
 
   * {
     transition: none !important;
+    animation: none !important;
   }
 }

@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { songs } from "./data/songs";
 import {
   DIFFICULTIES,
@@ -12,8 +12,10 @@ import {
 const LEVELS = Array.from({ length: 20 }, (_, index) => index + 1);
 const SELECTION_COUNTS = [1, 2, 3] as const;
 const BAN_STORAGE_KEY = "kalpa-selection:banned-song-ids:v1";
+const ANIMATION_STORAGE_KEY = "kalpa-selection:animation-enabled:v1";
 
 type SelectionCount = (typeof SELECTION_COUNTS)[number];
+type AnimationPhase = "idle" | "shuffle" | "reveal";
 
 const DIFFICULTY_LABELS: Record<Difficulty, string> = {
   NORMAL: "Normal",
@@ -34,6 +36,14 @@ function getInitialBannedIds(): string[] {
   }
 }
 
+function getInitialAnimationEnabled(): boolean {
+  try {
+    return window.localStorage.getItem(ANIMATION_STORAGE_KEY) !== "false";
+  } catch {
+    return true;
+  }
+}
+
 function toggleValue<T>(values: readonly T[], value: T): T[] {
   return values.includes(value)
     ? values.filter((item) => item !== value)
@@ -49,6 +59,11 @@ function App() {
   const [bannedIds, setBannedIds] = useState<string[]>(getInitialBannedIds);
   const [selectionCount, setSelectionCount] = useState<SelectionCount>(1);
   const [selections, setSelections] = useState<RandomSelection[]>([]);
+  const [previewSelections, setPreviewSelections] = useState<RandomSelection[]>([]);
+  const [animationEnabled, setAnimationEnabled] = useState(getInitialAnimationEnabled);
+  const [animationPhase, setAnimationPhase] = useState<AnimationPhase>("idle");
+  const animationTimers = useRef<number[]>([]);
+  const animationRun = useRef(0);
 
   const composers = useMemo(
     () => [...new Set(songs.map((song) => song.composer))].sort((a, b) => a.localeCompare(b)),
@@ -71,13 +86,34 @@ function App() {
   const hasFilters = Boolean(
     query || composer || pack || difficulties.length || levels.length,
   );
+  const isDrawing = animationPhase !== "idle";
+  const displayedSelections = isDrawing ? previewSelections : selections;
+
+  function clearAnimationTimers(): void {
+    animationTimers.current.forEach((timer) => window.clearTimeout(timer));
+    animationTimers.current = [];
+  }
+
+  function cancelAnimation(): void {
+    animationRun.current += 1;
+    clearAnimationTimers();
+    setAnimationPhase("idle");
+    setPreviewSelections([]);
+  }
+
+  useEffect(() => () => {
+    animationRun.current += 1;
+    clearAnimationTimers();
+  }, []);
 
   function updateFilter(update: () => void): void {
+    cancelAnimation();
     update();
     setSelections([]);
   }
 
   function resetFilters(): void {
+    cancelAnimation();
     setQuery("");
     setComposer("");
     setPack("");
@@ -87,6 +123,7 @@ function App() {
   }
 
   function toggleBan(songId: string): void {
+    cancelAnimation();
     const nextIds = toggleValue(bannedIds, songId);
     setBannedIds(nextIds);
     window.localStorage.setItem(BAN_STORAGE_KEY, JSON.stringify(nextIds));
@@ -95,8 +132,58 @@ function App() {
     }
   }
 
+  function toggleAnimation(): void {
+    const nextEnabled = !animationEnabled;
+    setAnimationEnabled(nextEnabled);
+    window.localStorage.setItem(ANIMATION_STORAGE_KEY, String(nextEnabled));
+  }
+
   function drawSong(): void {
-    setSelections(pickRandomCandidates(candidates, selectionCount));
+    clearAnimationTimers();
+    const run = animationRun.current + 1;
+    animationRun.current = run;
+    const finalSelections = pickRandomCandidates(candidates, selectionCount);
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (!animationEnabled || reduceMotion) {
+      setSelections(finalSelections);
+      setPreviewSelections([]);
+      setAnimationPhase("idle");
+      return;
+    }
+
+    const schedule = (callback: () => void, delay: number): void => {
+      const timer = window.setTimeout(() => {
+        if (animationRun.current === run) {
+          callback();
+        }
+      }, delay);
+      animationTimers.current.push(timer);
+    };
+
+    setSelections([]);
+    setPreviewSelections(pickRandomCandidates(candidates, selectionCount));
+    setAnimationPhase("shuffle");
+
+    for (let step = 1; step <= 7; step += 1) {
+      schedule(
+        () => setPreviewSelections(pickRandomCandidates(candidates, selectionCount)),
+        step * 85,
+      );
+    }
+
+    const revealStart = 680;
+    schedule(() => {
+      setPreviewSelections(finalSelections);
+      setAnimationPhase("reveal");
+    }, revealStart);
+
+    schedule(() => {
+      setSelections(finalSelections);
+      setPreviewSelections([]);
+      setAnimationPhase("idle");
+      animationTimers.current = [];
+    }, revealStart + finalSelections.length * 140 + 340);
   }
 
   return (
@@ -218,35 +305,57 @@ function App() {
               <span className="candidate-count">{candidates.length} 曲が候補</span>
             </div>
 
-            <div className="selection-count-control">
-              <span>選出曲数</span>
-              <div role="group" aria-label="選出曲数">
-                {SELECTION_COUNTS.map((count) => (
-                  <button
-                    key={count}
-                    type="button"
-                    aria-pressed={selectionCount === count}
-                    onClick={() => {
-                      setSelectionCount(count);
-                      setSelections([]);
-                    }}
-                  >
-                    {count}曲
-                  </button>
-                ))}
+            <div className="draw-settings">
+              <label className="animation-toggle">
+                <span>演出</span>
+                <input
+                  type="checkbox"
+                  checked={animationEnabled}
+                  disabled={isDrawing}
+                  onChange={toggleAnimation}
+                />
+                <span className="toggle-track" aria-hidden="true"><span /></span>
+                <strong>{animationEnabled ? "ON" : "OFF"}</strong>
+              </label>
+              <div className="selection-count-control">
+                <span>選出曲数</span>
+                <div role="group" aria-label="選出曲数">
+                  {SELECTION_COUNTS.map((count) => (
+                    <button
+                      key={count}
+                      type="button"
+                      disabled={isDrawing}
+                      aria-pressed={selectionCount === count}
+                      onClick={() => {
+                        setSelectionCount(count);
+                        setSelections([]);
+                      }}
+                    >
+                      {count}曲
+                    </button>
+                  ))}
+                </div>
               </div>
             </div>
 
             <div
-              className={`selection-display${selections.length > 0 ? ` has-selection result-count-${selections.length}` : ""}`}
-              aria-live="polite"
+              className={`selection-display${displayedSelections.length > 0 ? ` has-selection result-count-${displayedSelections.length}` : ""}${animationPhase === "shuffle" ? " is-shuffling" : ""}${animationPhase === "reveal" ? " is-revealing" : ""}`}
+              aria-live={animationPhase === "shuffle" ? "off" : "polite"}
+              aria-busy={isDrawing}
             >
-              {selections.length > 0 ? (
+              {displayedSelections.length > 0 ? (
                 <div className="selection-results">
-                  {selections.map((selection, index) => (
-                    <article className="selection-result" key={selection.song.id}>
+                  {displayedSelections.map((selection, index) => (
+                    <article
+                      className={`selection-result result-index-${index + 1}`}
+                      key={selection.song.id}
+                    >
                       <p className="selection-kicker">
-                        {selections.length === 1 ? "YOUR NEXT TRACK" : `TRACK ${index + 1}`}
+                        {animationPhase === "shuffle"
+                          ? "SHUFFLING"
+                          : displayedSelections.length === 1
+                            ? "YOUR NEXT TRACK"
+                            : `TRACK ${index + 1}`}
                       </p>
                       <h3>{selection.song.title}</h3>
                       <p className="selection-composer">{selection.song.composer}</p>
@@ -259,8 +368,8 @@ function App() {
                       </div>
                     </article>
                   ))}
-                  {selections.length < selectionCount && (
-                    <p className="selection-shortage">候補が{selections.length}曲のため、全候補を選出しました。</p>
+                  {!isDrawing && displayedSelections.length < selectionCount && (
+                    <p className="selection-shortage">候補が{displayedSelections.length}曲のため、全候補を選出しました。</p>
                   )}
                 </div>
               ) : (
@@ -275,9 +384,17 @@ function App() {
               className="draw-button"
               type="button"
               onClick={drawSong}
-              disabled={candidates.length === 0}
+              disabled={candidates.length === 0 || isDrawing}
             >
-              <span>{selections.length > 0 ? "もう一度選ぶ" : `${selectionCount}曲をランダムに選ぶ`}</span>
+              <span>
+                {animationPhase === "shuffle"
+                  ? "選出中…"
+                  : animationPhase === "reveal"
+                    ? "結果を確定中…"
+                    : selections.length > 0
+                      ? "もう一度選ぶ"
+                      : `${selectionCount}曲をランダムに選ぶ`}
+              </span>
               <span aria-hidden="true">→</span>
             </button>
             <p className="draw-note">BANした曲は選出候補から除外されます。</p>
