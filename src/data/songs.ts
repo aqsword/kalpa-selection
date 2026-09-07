@@ -4,6 +4,17 @@ import type { Song } from "../domain/song";
 export const songs = [
   {
     id: "1",
+    title: "¢orrupted ar¢hetype",
+    composer: "Lauridsen & VOiD",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 8,
+      HARD: 14,
+      COSMOS: 18,
+    },
+  },
+  {
+    id: "2",
     title: "+ERABY+E CONNEC+10N",
     composer: "Camellia",
     pack: "Camellia Pack",
@@ -14,7 +25,62 @@ export const songs = [
     },
   },
   {
-    id: "2",
+    id: "3",
+    title: "∀",
+    composer: "ああああ",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 4,
+      HARD: 13,
+      COSMOS: 17,
+    },
+  },
+  {
+    id: "4",
+    title: "3.566×10^80m3",
+    composer: "Apo11o program vs. Ice ft.朧-oboro-",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 6,
+      HARD: 13,
+      COSMOS: 18,
+    },
+  },
+  {
+    id: "5",
+    title: "420mb (Game Edit)",
+    composer: "ariiol",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 6,
+      HARD: 14,
+      COSMOS: 18,
+    },
+  },
+  {
+    id: "6",
+    title: "Acataar ~ Reincarnation of Kalpa ~",
+    composer: "Scarlette a.k.a. CrYmson",
+    pack: "STORY",
+    levels: {
+      NORMAL: 6,
+      HARD: 12,
+      COSMOS: 17,
+    },
+  },
+  {
+    id: "7",
+    title: "Aci-L (Remaster)",
+    composer: "-45",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 6,
+      HARD: 15,
+      COSMOS: 17,
+    },
+  },
+  {
+    id: "8",
     title: "Aci-L (Since04’orangentle Remix)",
     composer: "orangentle",
     pack: "Mass Recall Omega",
@@ -25,7 +91,29 @@ export const songs = [
     },
   },
   {
-    id: "3",
+    id: "9",
+    title: "Alice in Misanthrope -厭世アリス-",
+    composer: "LeaF",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 7,
+      HARD: 13,
+      COSMOS: 17,
+    },
+  },
+  {
+    id: "10",
+    title: "Altale",
+    composer: "削除(Sakuzyo)",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 6,
+      HARD: 12,
+      COSMOS: 17,
+    },
+  },
+  {
+    id: "11",
     title: "Amphetamine",
     composer: "MonstDeath vs Neutral Moon",
     pack: "Fourth Forte Pack",
@@ -36,7 +124,7 @@ export const songs = [
     },
   },
   {
-    id: "4",
+    id: "12",
     title: "Andromeda 02 ~Avantgarde~",
     composer: "Sound Souler",
     pack: "SixtarGate Collaboration Pack",
@@ -47,7 +135,18 @@ export const songs = [
     },
   },
   {
-    id: "5",
+    id: "13",
+    title: "Another Me",
+    composer: "D_AAN",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 7,
+      HARD: 12,
+      COSMOS: 17,
+    },
+  },
+  {
+    id: "14",
     title: "Antinomic Queen",
     composer: "polysha",
     pack: "SixtarGate Collaboration Pack",
@@ -58,7 +157,7 @@ export const songs = [
     },
   },
   {
-    id: "6",
+    id: "15",
     title: "-Arkhēi-",
     composer: "Sera Amagi",
     pack: "Third Forte Pack",
@@ -69,7 +168,40 @@ export const songs = [
     },
   },
   {
-    id: "7",
+    id: "16",
+    title: "Ars Cantate",
+    composer: "rN",
+    pack: "STORY",
+    levels: {
+      NORMAL: 8,
+      HARD: 15,
+      COSMOS: 18,
+    },
+  },
+  {
+    id: "17",
+    title: "Aspera Noctis",
+    composer: "Kagetora.",
+    pack: "STORY",
+    levels: {
+      NORMAL: 8,
+      HARD: 15,
+      COSMOS: 18,
+    },
+  },
+  {
+    id: "18",
+    title: "Aspera Noctis, Astra Lucis",
+    composer: "Kagetora. & Ice feat. Scarlette",
+    pack: "STORY",
+    levels: {
+      NORMAL: 11,
+      HARD: 16,
+      COSMOS: 20,
+    },
+  },
+  {
+    id: "19",
     title: "Astaroth",
     composer: "Team Grimoire",
     pack: "Lanota Collaboration Pack",
@@ -80,7 +212,29 @@ export const songs = [
     },
   },
   {
-    id: "8",
+    id: "20",
+    title: "Astra Lucis",
+    composer: "Ice feat. Scarlette",
+    pack: "STORY",
+    levels: {
+      NORMAL: 7,
+      HARD: 14,
+      COSMOS: 18,
+    },
+  },
+  {
+    id: "21",
+    title: "Äventyr",
+    composer: "Rigël Theatre",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 5,
+      HARD: 12,
+      COSMOS: 16,
+    },
+  },
+  {
+    id: "22",
     title: "Äventyr (Seirḗn Mix) - JP ver.",
     composer: "Sera Amagi",
     pack: "Mass Recall Omega",
@@ -91,7 +245,7 @@ export const songs = [
     },
   },
   {
-    id: "9",
+    id: "23",
     title: "Äventyr (Seirḗn Mix) prod. Yuukineko",
     composer: "MYULee feat. Sera Amagi",
     pack: "Mass Recall Omega",
@@ -102,7 +256,7 @@ export const songs = [
     },
   },
   {
-    id: "10",
+    id: "24",
     title: "Awakening of Civilization",
     composer: "黒魔",
     pack: "Paradigm: Reboot Collaboration Pack",
@@ -113,7 +267,7 @@ export const songs = [
     },
   },
   {
-    id: "11",
+    id: "25",
     title: "BASTET",
     composer: "Jehezukiel",
     pack: "Third Forte Pack",
@@ -124,7 +278,18 @@ export const songs = [
     },
   },
   {
-    id: "12",
+    id: "26",
+    title: "Bathin",
+    composer: "Team Grimoire",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 8,
+      HARD: 16,
+      COSMOS: 19,
+    },
+  },
+  {
+    id: "27",
     title: "Battle for the future",
     composer: "ieri",
     pack: "Deeeer Simulator Collaboration Pack",
@@ -135,7 +300,7 @@ export const songs = [
     },
   },
   {
-    id: "13",
+    id: "28",
     title: "Better than Yesterday feat. NC.A",
     composer: "INFX",
     pack: "Origin Vol. 2 Pack",
@@ -146,7 +311,18 @@ export const songs = [
     },
   },
   {
-    id: "14",
+    id: "29",
+    title: "Binary Wonderland",
+    composer: "7mai",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 5,
+      HARD: 12,
+      COSMOS: 18,
+    },
+  },
+  {
+    id: "30",
     title: "Black and White Monster",
     composer: "Tezuka",
     pack: "Berry Melody Collaboration Pack",
@@ -157,7 +333,7 @@ export const songs = [
     },
   },
   {
-    id: "15",
+    id: "31",
     title: "Black Region",
     composer: "seatrus",
     pack: "Second Forte Pack",
@@ -168,7 +344,18 @@ export const songs = [
     },
   },
   {
-    id: "16",
+    id: "32",
+    title: "Bloody Sisters♡Invasion",
+    composer: "ShrimpCats.(はぁち × 後藤涼輔)",
+    pack: "STORY",
+    levels: {
+      NORMAL: 5,
+      HARD: 11,
+      COSMOS: 16,
+    },
+  },
+  {
+    id: "33",
     title: "Body F10ating in the Zero Gravity Space",
     composer: "Camellia",
     pack: "Camellia Pack",
@@ -179,7 +366,7 @@ export const songs = [
     },
   },
   {
-    id: "17",
+    id: "34",
     title: "Bossfire",
     composer: "Roy Mikelate feat. ATAS",
     pack: "SixtarGate Collaboration Pack",
@@ -190,7 +377,7 @@ export const songs = [
     },
   },
   {
-    id: "18",
+    id: "35",
     title: "Boxel Adventure",
     composer: "7mai",
     pack: "Third Forte Pack",
@@ -201,7 +388,18 @@ export const songs = [
     },
   },
   {
-    id: "19",
+    id: "36",
+    title: "Brain Power",
+    composer: "NOMA",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 8,
+      HARD: 14,
+      COSMOS: 17,
+    },
+  },
+  {
+    id: "37",
     title: "Brain Power(Cranky Remix)",
     composer: "Cranky",
     pack: "Mass Recall Omega",
@@ -212,7 +410,7 @@ export const songs = [
     },
   },
   {
-    id: "20",
+    id: "38",
     title: "BRAVE : ROAD",
     composer: "uma vs. モリモリあつし",
     pack: "Rizline Collaboration Pack",
@@ -223,7 +421,7 @@ export const songs = [
     },
   },
   {
-    id: "21",
+    id: "39",
     title: "Bright red hertz",
     composer: "Kagetora. feat. Shabel Tonya",
     pack: "Berry Melody Collaboration Pack",
@@ -234,7 +432,7 @@ export const songs = [
     },
   },
   {
-    id: "22",
+    id: "40",
     title: "Burnfire feat. 문모모",
     composer: "Roy Mikelate & FidgetSpinny",
     pack: "Origin Vol.1",
@@ -245,7 +443,7 @@ export const songs = [
     },
   },
   {
-    id: "23",
+    id: "41",
     title: "Calorific Refract",
     composer: "Tatsh",
     pack: "Rotaeno Collaboration Pack",
@@ -256,7 +454,62 @@ export const songs = [
     },
   },
   {
-    id: "24",
+    id: "42",
+    title: "Can U Feel It",
+    composer: "siqlo",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 4,
+      HARD: 13,
+      COSMOS: 17,
+    },
+  },
+  {
+    id: "43",
+    title: "CANON (RYU Remix)",
+    composer: "RYU",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 6,
+      HARD: 12,
+      COSMOS: 16,
+    },
+  },
+  {
+    id: "44",
+    title: "Cat(ch) My♡Haxt!!!!!",
+    composer: "はぁち(Music：後藤涼輔)",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 3,
+      HARD: 13,
+      COSMOS: 16,
+    },
+  },
+  {
+    id: "45",
+    title: "Causality",
+    composer: "kuro",
+    pack: "STORY",
+    levels: {
+      NORMAL: 5,
+      HARD: 12,
+      COSMOS: 17,
+    },
+  },
+  {
+    id: "46",
+    title: "Chronostellar",
+    composer: "Salad Savior vs. U-Ruri",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 7,
+      HARD: 13,
+      COSMOS: 17,
+    },
+  },
+  {
+    id: "47",
     title: "CLIMAX9999",
     composer: "Blacklolita",
     pack: "Origin Vol. 2 Pack",
@@ -267,7 +520,7 @@ export const songs = [
     },
   },
   {
-    id: "25",
+    id: "48",
     title: "Colourful Diving!",
     composer: "天束",
     pack: "Origin Vol. 2 Pack",
@@ -278,7 +531,7 @@ export const songs = [
     },
   },
   {
-    id: "26",
+    id: "49",
     title: "Compute It With Some Devilish Alcoholic Steampunk Engines",
     composer: "Camellia",
     pack: "Camellia Pack",
@@ -289,7 +542,7 @@ export const songs = [
     },
   },
   {
-    id: "27",
+    id: "50",
     title: "Concvssion",
     composer: "Halv",
     pack: "Phigros Collaboration Pack",
@@ -300,7 +553,29 @@ export const songs = [
     },
   },
   {
-    id: "28",
+    id: "51",
+    title: "conflict",
+    composer: "siromaru + cranky",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 7,
+      HARD: 13,
+      COSMOS: 17,
+    },
+  },
+  {
+    id: "52",
+    title: "Cross†Over feat. LyuU",
+    composer: "HyuN",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 6,
+      HARD: 13,
+      COSMOS: 17,
+    },
+  },
+  {
+    id: "53",
     title: "Ctrl + Alt + Del",
     composer: "Roy Mikelate",
     pack: "Third Forte Pack",
@@ -311,7 +586,18 @@ export const songs = [
     },
   },
   {
-    id: "29",
+    id: "54",
+    title: "Cutter",
+    composer: "EmoCosine",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 5,
+      HARD: 11,
+      COSMOS: 16,
+    },
+  },
+  {
+    id: "55",
     title: "cybernetic blazar",
     composer: "ああああ",
     pack: "Notanote Collaboration Pack",
@@ -322,7 +608,7 @@ export const songs = [
     },
   },
   {
-    id: "30",
+    id: "56",
     title: "Dance with Silence",
     composer: "Camellia",
     pack: "Camellia Pack",
@@ -333,7 +619,29 @@ export const songs = [
     },
   },
   {
-    id: "31",
+    id: "57",
+    title: "Dancer from the far east",
+    composer: "Halv",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 7,
+      HARD: 14,
+      COSMOS: 17,
+    },
+  },
+  {
+    id: "58",
+    title: "DataErr0r",
+    composer: "Cosmograph",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 6,
+      HARD: 13,
+      COSMOS: 16,
+    },
+  },
+  {
+    id: "59",
     title: "DataErr0r (Crimson Cyberpunk Mix)",
     composer: "Scarlette",
     pack: "Mass Recall Omega",
@@ -344,7 +652,7 @@ export const songs = [
     },
   },
   {
-    id: "32",
+    id: "60",
     title: "Daughter of Daedalus",
     composer: "tn-shi",
     pack: "Notanote Collaboration Pack",
@@ -355,7 +663,18 @@ export const songs = [
     },
   },
   {
-    id: "33",
+    id: "61",
+    title: "Dear Farthest You",
+    composer: "くるぶっこちゃん",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 7,
+      HARD: 13,
+      COSMOS: 18,
+    },
+  },
+  {
+    id: "62",
     title: "Deathfight 3rd",
     composer: "GANO",
     pack: "Deeeer Simulator Collaboration Pack",
@@ -366,7 +685,7 @@ export const songs = [
     },
   },
   {
-    id: "34",
+    id: "63",
     title: "Deep Blue Wave",
     composer: "Yesod",
     pack: "Origin Vol.1",
@@ -377,7 +696,7 @@ export const songs = [
     },
   },
   {
-    id: "35",
+    id: "64",
     title: "DESTRUCTION 3,2,1",
     composer: "Normal1zer vs. Broken Nerdz",
     pack: "Phigros Collaboration Pack",
@@ -388,9 +707,20 @@ export const songs = [
     },
   },
   {
-    id: "36",
+    id: "65",
+    title: "Disorder feat. YURI",
+    composer: "HyuN",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 7,
+      HARD: 14,
+      COSMOS: 17,
+    },
+  },
+  {
+    id: "66",
     title: "Distorted Fate",
-    composer: "Sakuzyo",
+    composer: "削除(Sakuzyo)",
     pack: "Phigros Collaboration Pack",
     levels: {
       NORMAL: 7,
@@ -399,8 +729,41 @@ export const songs = [
     },
   },
   {
-    id: "37",
-    title: "Dot-Line (short ver.)",
+    id: "67",
+    title: "Diva of Avalon",
+    composer: "Connexio vs KONPEKi",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 7,
+      HARD: 12,
+      COSMOS: 18,
+    },
+  },
+  {
+    id: "68",
+    title: "Don't Never Around",
+    composer: "HAMA",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 5,
+      HARD: 13,
+      COSMOS: 17,
+    },
+  },
+  {
+    id: "69",
+    title: "Doppelganger",
+    composer: "LeaF",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 8,
+      HARD: 14,
+      COSMOS: 18,
+    },
+  },
+  {
+    id: "70",
+    title: "Dot-Line feat. ななひら(short ver.)",
     composer: "A-39 & 沙包P & ななひら",
     pack: "Rizline Collaboration Pack",
     levels: {
@@ -410,7 +773,7 @@ export const songs = [
     },
   },
   {
-    id: "38",
+    id: "71",
     title: "DURAND4L",
     composer: "xi",
     pack: "Origin Vol. 2 Pack",
@@ -421,7 +784,73 @@ export const songs = [
     },
   },
   {
-    id: "39",
+    id: "72",
+    title: "Eldredth",
+    composer: "Nordius Dystancius (ZxNX & Billium Moto)",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 7,
+      HARD: 13,
+      COSMOS: 16,
+    },
+  },
+  {
+    id: "73",
+    title: "Electric Comet",
+    composer: "Meram1n",
+    pack: "STORY",
+    levels: {
+      NORMAL: 6,
+      HARD: 14,
+      COSMOS: 17,
+    },
+  },
+  {
+    id: "74",
+    title: "EMOTIONALL BRINGBACKK",
+    composer: "Yu_Asahina VS orangentle",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 6,
+      HARD: 12,
+      COSMOS: 18,
+    },
+  },
+  {
+    id: "75",
+    title: "Enceladus",
+    composer: "Abel & Hexacube",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 6,
+      HARD: 15,
+      COSMOS: 17,
+    },
+  },
+  {
+    id: "76",
+    title: "Encore",
+    composer: "ZxNX & Hiryur",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 6,
+      HARD: 13,
+      COSMOS: 16,
+    },
+  },
+  {
+    id: "77",
+    title: "Entrance",
+    composer: "Ice",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 5,
+      HARD: 14,
+      COSMOS: 17,
+    },
+  },
+  {
+    id: "78",
     title: "Eranthis",
     composer: "LucaProject",
     pack: "SixtarGate Collaboration Pack",
@@ -432,7 +861,29 @@ export const songs = [
     },
   },
   {
-    id: "40",
+    id: "79",
+    title: "Eschatologu",
+    composer: "Tetsh & Scarlette",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 6,
+      HARD: 11,
+      COSMOS: 18,
+    },
+  },
+  {
+    id: "80",
+    title: "Ēvocator",
+    composer: "Evin a'k",
+    pack: "STORY",
+    levels: {
+      NORMAL: 8,
+      HARD: 14,
+      COSMOS: 18,
+    },
+  },
+  {
+    id: "81",
     title: "EXILE",
     composer: "-45",
     pack: "First Forte",
@@ -443,7 +894,51 @@ export const songs = [
     },
   },
   {
-    id: "41",
+    id: "82",
+    title: "Faith of Eastward",
+    composer: "Reku Mochizuki",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 6,
+      HARD: 13,
+      COSMOS: 16,
+    },
+  },
+  {
+    id: "83",
+    title: "fallin' fallin' prod. INFX, Ella Jung, Limpid",
+    composer: "kradness",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 3,
+      HARD: 8,
+      COSMOS: 14,
+    },
+  },
+  {
+    id: "84",
+    title: "Fantasia Sonata God Dance",
+    composer: "PYKAMIA vs. Sakuzyo",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 4,
+      HARD: 12,
+      COSMOS: 15,
+    },
+  },
+  {
+    id: "85",
+    title: "Fantasia Sonata Imagination feat. Setsunann, 尋P",
+    composer: "PYKAMIA",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 5,
+      HARD: 12,
+      COSMOS: 17,
+    },
+  },
+  {
+    id: "86",
     title: "Faye's Theme (Paper Memories Vers.)",
     composer: "Kan Gao",
     pack: "To the Moon Collaboration Pack",
@@ -454,7 +949,18 @@ export const songs = [
     },
   },
   {
-    id: "42",
+    id: "87",
+    title: "felys -final remix-",
+    composer: "onoken",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 4,
+      HARD: 12,
+      COSMOS: 16,
+    },
+  },
+  {
+    id: "88",
     title: "Flamewall (Game Edit)",
     composer: "Camellia",
     pack: "Camellia Pack",
@@ -465,7 +971,7 @@ export const songs = [
     },
   },
   {
-    id: "43",
+    id: "89",
     title: "Flamewall (Original Mix)",
     composer: "Camellia",
     pack: "Camellia Pack",
@@ -476,7 +982,7 @@ export const songs = [
     },
   },
   {
-    id: "44",
+    id: "90",
     title: "Flugel",
     composer: "Cranky",
     pack: "Third Forte Pack",
@@ -487,7 +993,18 @@ export const songs = [
     },
   },
   {
-    id: "45",
+    id: "91",
+    title: "Flutter Echo",
+    composer: "Cansol",
+    pack: "STORY",
+    levels: {
+      NORMAL: 5,
+      HARD: 12,
+      COSMOS: 16,
+    },
+  },
+  {
+    id: "92",
     title: "For River - Piano (Johnny's Version)",
     composer: "Kan Gao",
     pack: "To the Moon Collaboration Pack",
@@ -498,7 +1015,7 @@ export const songs = [
     },
   },
   {
-    id: "46",
+    id: "93",
     title: "FORTALiCE",
     composer: "ZxNX",
     pack: "Fourth Forte Pack",
@@ -509,7 +1026,18 @@ export const songs = [
     },
   },
   {
-    id: "47",
+    id: "94",
+    title: "Fragments",
+    composer: "Sera Amagi",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 4,
+      HARD: 10,
+      COSMOS: 14,
+    },
+  },
+  {
+    id: "95",
     title: "Freaky Undulations ~Noble Knights of The Tune~",
     composer: "Jehezukiel & KURORAK",
     pack: "Fourth Forte Pack",
@@ -520,7 +1048,40 @@ export const songs = [
     },
   },
   {
-    id: "48",
+    id: "96",
+    title: "FREEDOM DiVE↓",
+    composer: "xi",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 8,
+      HARD: 14,
+      COSMOS: 18,
+    },
+  },
+  {
+    id: "97",
+    title: "FRIEND",
+    composer: "D_AAN",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 5,
+      HARD: 11,
+      COSMOS: 17,
+    },
+  },
+  {
+    id: "98",
+    title: "Frontierseekers Scarlette commissioned by 고곰냥",
+    composer: "Scarlette",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 7,
+      HARD: 13,
+      COSMOS: 17,
+    },
+  },
+  {
+    id: "99",
     title: "G e n g a o z o",
     composer: "-45",
     pack: "Second Forte Pack",
@@ -531,7 +1092,7 @@ export const songs = [
     },
   },
   {
-    id: "49",
+    id: "100",
     title: "GALACTIC WARZONE",
     composer: "Akira Complex",
     pack: "Rotaeno Collaboration Pack",
@@ -542,7 +1103,7 @@ export const songs = [
     },
   },
   {
-    id: "50",
+    id: "101",
     title: "GHOST (Game Edit)",
     composer: "Camellia",
     pack: "Camellia Pack",
@@ -553,7 +1114,7 @@ export const songs = [
     },
   },
   {
-    id: "51",
+    id: "102",
     title: "GHOST (Original Mix)",
     composer: "Camellia",
     pack: "Camellia Pack",
@@ -564,7 +1125,18 @@ export const songs = [
     },
   },
   {
-    id: "52",
+    id: "103",
+    title: "Giselle",
+    composer: "Sobrem a.k.a. Widowmaker",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 6,
+      HARD: 12,
+      COSMOS: 17,
+    },
+  },
+  {
+    id: "104",
     title: "GOODBOUNCE (Drunk Remix)",
     composer: "EBIMAYO",
     pack: "Mass Recall Omega",
@@ -575,7 +1147,7 @@ export const songs = [
     },
   },
   {
-    id: "53",
+    id: "105",
     title: "GOODRAGE (seatrus 海ックス)",
     composer: "seatrus",
     pack: "Mass Recall Omega",
@@ -586,7 +1158,29 @@ export const songs = [
     },
   },
   {
-    id: "54",
+    id: "106",
+    title: "GOODTEK (Sprint Remix)",
+    composer: "EBIMAYO",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 9,
+      HARD: 15,
+      COSMOS: 17,
+    },
+  },
+  {
+    id: "107",
+    title: "Grabbing a Star",
+    composer: "seatrus",
+    pack: "STORY",
+    levels: {
+      NORMAL: 7,
+      HARD: 13,
+      COSMOS: 18,
+    },
+  },
+  {
+    id: "108",
     title: "Grayscale Tragedy",
     composer: "Polysha",
     pack: "Berry Melody Collaboration Pack",
@@ -597,7 +1191,7 @@ export const songs = [
     },
   },
   {
-    id: "55",
+    id: "109",
     title: "HADALI",
     composer: "Kaede Hiyama (feat. Real)",
     pack: "Fourth Forte Pack",
@@ -608,7 +1202,7 @@ export const songs = [
     },
   },
   {
-    id: "56",
+    id: "110",
     title: "HAELEQ∩INZ -the clown of 24stairs-",
     composer: "orangentle / Yu_Asahina",
     pack: "First Forte",
@@ -619,7 +1213,18 @@ export const songs = [
     },
   },
   {
-    id: "57",
+    id: "111",
+    title: "Halcyon",
+    composer: "xi",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 6,
+      HARD: 13,
+      COSMOS: 17,
+    },
+  },
+  {
+    id: "112",
     title: "Halcyon (MRM REMIX)",
     composer: "xi Remixed by モリモリあつし",
     pack: "Mass Recall Omega",
@@ -630,7 +1235,18 @@ export const songs = [
     },
   },
   {
-    id: "58",
+    id: "113",
+    title: "Happily Ever After",
+    composer: "Cansol",
+    pack: "STORY",
+    levels: {
+      NORMAL: 5,
+      HARD: 11,
+      COSMOS: 15,
+    },
+  },
+  {
+    id: "114",
     title: "HATEN CODE 583",
     composer: "MYUKKE.",
     pack: "Berry Melody Collaboration Pack",
@@ -641,7 +1257,29 @@ export const songs = [
     },
   },
   {
-    id: "59",
+    id: "115",
+    title: "HAZARD",
+    composer: "Limpid",
+    pack: "STORY",
+    levels: {
+      NORMAL: 5,
+      HARD: 12,
+      COSMOS: 16,
+    },
+  },
+  {
+    id: "116",
+    title: "Hello, Stranger",
+    composer: "LhoU",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 1,
+      HARD: 10,
+      COSMOS: 16,
+    },
+  },
+  {
+    id: "117",
     title: "Hyper Math feat. utumiyqcom",
     composer: "Capchii",
     pack: "Origin Vol. 2 Pack",
@@ -652,7 +1290,7 @@ export const songs = [
     },
   },
   {
-    id: "60",
+    id: "118",
     title: "Igallta",
     composer: "Se-U-Ra",
     pack: "Phigros Collaboration Pack",
@@ -663,7 +1301,40 @@ export const songs = [
     },
   },
   {
-    id: "61",
+    id: "119",
+    title: "Ignite",
+    composer: "Neutral Moon",
+    pack: "STORY",
+    levels: {
+      NORMAL: 6,
+      HARD: 11,
+      COSMOS: 17,
+    },
+  },
+  {
+    id: "120",
+    title: "immortality",
+    composer: "Scarlette",
+    pack: "STORY",
+    levels: {
+      NORMAL: 4,
+      HARD: 11,
+      COSMOS: 17,
+    },
+  },
+  {
+    id: "121",
+    title: "INFiNiTE ENERZY -Overdoze-",
+    composer: "Reku Mochizuki",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 6,
+      HARD: 13,
+      COSMOS: 16,
+    },
+  },
+  {
+    id: "122",
     title: "Innocent white",
     composer: "Kagetora.",
     pack: "Notanote Collaboration Pack",
@@ -674,7 +1345,18 @@ export const songs = [
     },
   },
   {
-    id: "62",
+    id: "123",
+    title: "INSANE STRATEGY",
+    composer: "Limpid",
+    pack: "STORY",
+    levels: {
+      NORMAL: 6,
+      HARD: 13,
+      COSMOS: 17,
+    },
+  },
+  {
+    id: "124",
     title: "Into a Frenzy",
     composer: "Masahiro \"Godspeed\" Aoki",
     pack: "SixtarGate Collaboration Pack",
@@ -685,7 +1367,7 @@ export const songs = [
     },
   },
   {
-    id: "63",
+    id: "125",
     title: "Inverted World",
     composer: "ARForest",
     pack: "Rotaeno Collaboration Pack",
@@ -696,7 +1378,7 @@ export const songs = [
     },
   },
   {
-    id: "64",
+    id: "126",
     title: "iRELLiA",
     composer: "HyuN",
     pack: "Fourth Forte Pack",
@@ -707,7 +1389,29 @@ export const songs = [
     },
   },
   {
-    id: "65",
+    id: "127",
+    title: "Iris",
+    composer: "a_hisa",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 3,
+      HARD: 12,
+      COSMOS: 16,
+    },
+  },
+  {
+    id: "128",
+    title: "Kaleidosc0pe",
+    composer: "Halv",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 6,
+      HARD: 14,
+      COSMOS: 17,
+    },
+  },
+  {
+    id: "129",
     title: "kintsugi",
     composer: "Iris",
     pack: "Second Forte Pack",
@@ -718,7 +1422,29 @@ export const songs = [
     },
   },
   {
-    id: "66",
+    id: "130",
+    title: "Kirakira Noel Story!!",
+    composer: "Reku Mochizuki",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 5,
+      HARD: 12,
+      COSMOS: 15,
+    },
+  },
+  {
+    id: "131",
+    title: "KiraKiraBoshi (pen Remix)",
+    composer: "pan",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 6,
+      HARD: 12,
+      COSMOS: 17,
+    },
+  },
+  {
+    id: "132",
     title: "Kizuna",
     composer: "RiraN feat. 音琴兎愛",
     pack: "Origin Vol.1",
@@ -729,7 +1455,40 @@ export const songs = [
     },
   },
   {
-    id: "67",
+    id: "133",
+    title: "L.Y.N.N.",
+    composer: "Scarlette",
+    pack: "STORY",
+    levels: {
+      NORMAL: 6,
+      HARD: 12,
+      COSMOS: 17,
+    },
+  },
+  {
+    id: "134",
+    title: "L2 -Reminiscence-",
+    composer: "Ice",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 4,
+      HARD: 13,
+      COSMOS: 16,
+    },
+  },
+  {
+    id: "135",
+    title: "la campanella scalatte",
+    composer: "Scarlette",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 4,
+      HARD: 11,
+      COSMOS: 15,
+    },
+  },
+  {
+    id: "136",
     title: "Lapis (Ice Respect Remix)",
     composer: "SHIKI Remixed by Ice",
     pack: "Mass Recall Omega",
@@ -740,7 +1499,18 @@ export const songs = [
     },
   },
   {
-    id: "68",
+    id: "137",
+    title: "Lapis (Remaster)",
+    composer: "SHIKI",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 3,
+      HARD: 10,
+      COSMOS: 16,
+    },
+  },
+  {
+    id: "138",
     title: "Legacy",
     composer: "Jehezukiel",
     pack: "First Forte",
@@ -751,7 +1521,7 @@ export const songs = [
     },
   },
   {
-    id: "69",
+    id: "139",
     title: "Lemuria",
     composer: "xi",
     pack: "First Forte",
@@ -762,7 +1532,18 @@ export const songs = [
     },
   },
   {
-    id: "70",
+    id: "140",
+    title: "Libera me",
+    composer: "Cranky",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 6,
+      HARD: 12,
+      COSMOS: 17,
+    },
+  },
+  {
+    id: "141",
     title: "Light into Heart",
     composer: "Nauts",
     pack: "Origin Vol.1",
@@ -773,7 +1554,18 @@ export const songs = [
     },
   },
   {
-    id: "71",
+    id: "142",
+    title: "Lightupperz!!",
+    composer: "Reku Mochizuki",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 5,
+      HARD: 13,
+      COSMOS: 18,
+    },
+  },
+  {
+    id: "143",
     title: "LINK x LIN#S",
     composer: "Halv",
     pack: "Rizline Collaboration Pack",
@@ -784,7 +1576,18 @@ export const songs = [
     },
   },
   {
-    id: "72",
+    id: "144",
+    title: "Lost Eden feat. おくみずき",
+    composer: "Dokuwaki",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 6,
+      HARD: 12,
+      COSMOS: 17,
+    },
+  },
+  {
+    id: "145",
     title: "Lost Future",
     composer: "Aspid Cat",
     pack: "Rizline Collaboration Pack",
@@ -795,7 +1598,7 @@ export const songs = [
     },
   },
   {
-    id: "73",
+    id: "146",
     title: "Lullaby from a Star",
     composer: "Kan Gao, feat. Pealeaf",
     pack: "To the Moon Collaboration Pack",
@@ -806,7 +1609,18 @@ export const songs = [
     },
   },
   {
-    id: "74",
+    id: "147",
+    title: "Luminous Cosmos",
+    composer: "Nekoneet",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 7,
+      HARD: 13,
+      COSMOS: 17,
+    },
+  },
+  {
+    id: "148",
     title: "M1LLI0N PP (Game Edit)",
     composer: "Camellia",
     pack: "Camellia Pack",
@@ -817,7 +1631,7 @@ export const songs = [
     },
   },
   {
-    id: "75",
+    id: "149",
     title: "M1LLI0N PP (Original Mix)",
     composer: "Camellia",
     pack: "Camellia Pack",
@@ -828,7 +1642,7 @@ export const songs = [
     },
   },
   {
-    id: "76",
+    id: "150",
     title: "ma[χ]zo",
     composer: "t+pazolite",
     pack: "Paradigm: Reboot Collaboration Pack",
@@ -839,7 +1653,7 @@ export const songs = [
     },
   },
   {
-    id: "77",
+    id: "151",
     title: "Maholova",
     composer: "aran",
     pack: "Rotaeno Collaboration Pack",
@@ -850,7 +1664,18 @@ export const songs = [
     },
   },
   {
-    id: "78",
+    id: "152",
+    title: "Miageta Sora wa Twin Star Datta",
+    composer: "Scarlette",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 3,
+      HARD: 10,
+      COSMOS: 15,
+    },
+  },
+  {
+    id: "153",
     title: "MilK",
     composer: "モリモリあつし",
     pack: "Second Forte Pack",
@@ -861,7 +1686,18 @@ export const songs = [
     },
   },
   {
-    id: "79",
+    id: "154",
+    title: "Mistilteinn",
+    composer: "LucaProject",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 4,
+      HARD: 13,
+      COSMOS: 17,
+    },
+  },
+  {
+    id: "155",
     title: "monolith",
     composer: "Takenoko boy feat. metyao",
     pack: "Lanota Collaboration Pack",
@@ -872,7 +1708,7 @@ export const songs = [
     },
   },
   {
-    id: "80",
+    id: "156",
     title: "Moon And Back",
     composer: "RiraN",
     pack: "SixtarGate Collaboration Pack",
@@ -883,7 +1719,7 @@ export const songs = [
     },
   },
   {
-    id: "81",
+    id: "157",
     title: "Morgenglut 2012",
     composer: "sun3",
     pack: "Third Forte Pack",
@@ -894,7 +1730,18 @@ export const songs = [
     },
   },
   {
-    id: "82",
+    id: "158",
+    title: "My Heaven",
+    composer: "Jehezukiel",
+    pack: "STORY",
+    levels: {
+      NORMAL: 6,
+      HARD: 12,
+      COSMOS: 16,
+    },
+  },
+  {
+    id: "159",
     title: "Mystical Observer",
     composer: "DJ Myosuke",
     pack: "Paradigm: Reboot Collaboration Pack",
@@ -905,7 +1752,29 @@ export const songs = [
     },
   },
   {
-    id: "83",
+    id: "160",
+    title: "NecronomicoN",
+    composer: "KW9",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 7,
+      HARD: 14,
+      COSMOS: 18,
+    },
+  },
+  {
+    id: "161",
+    title: "Neon tetra",
+    composer: "ginkiha feat. TEA",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 1,
+      HARD: 9,
+      COSMOS: 15,
+    },
+  },
+  {
+    id: "162",
     title: "Neon Walk",
     composer: "Kuripper",
     pack: "Deeeer Simulator Collaboration Pack",
@@ -916,7 +1785,7 @@ export const songs = [
     },
   },
   {
-    id: "84",
+    id: "163",
     title: "Night Shift",
     composer: "PTB10",
     pack: "Fourth Forte Pack",
@@ -927,7 +1796,18 @@ export const songs = [
     },
   },
   {
-    id: "85",
+    id: "164",
+    title: "Nini",
+    composer: "テヅカ",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 6,
+      HARD: 11,
+      COSMOS: 16,
+    },
+  },
+  {
+    id: "165",
     title: "NO ONE YES MAN",
     composer: "MYUKKE.",
     pack: "Phigros Collaboration Pack",
@@ -938,7 +1818,7 @@ export const songs = [
     },
   },
   {
-    id: "86",
+    id: "166",
     title: "Oblivion Lotus",
     composer: "wa.",
     pack: "Origin Vol.1",
@@ -949,7 +1829,7 @@ export const songs = [
     },
   },
   {
-    id: "87",
+    id: "167",
     title: "OMG",
     composer: "Halv",
     pack: "Second Forte Pack",
@@ -960,7 +1840,29 @@ export const songs = [
     },
   },
   {
-    id: "88",
+    id: "168",
+    title: "Once again (VIP)",
+    composer: "Cansol",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 9,
+      HARD: 15,
+      COSMOS: 18,
+    },
+  },
+  {
+    id: "169",
+    title: "Ophelia",
+    composer: "Lime",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 4,
+      HARD: 13,
+      COSMOS: 16,
+    },
+  },
+  {
+    id: "170",
     title: "Ophelia -Phantasm-",
     composer: "Lime",
     pack: "Mass Recall Omega",
@@ -971,7 +1873,40 @@ export const songs = [
     },
   },
   {
-    id: "89",
+    id: "171",
+    title: "Oracle",
+    composer: "TQ ☆",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 4,
+      HARD: 10,
+      COSMOS: 16,
+    },
+  },
+  {
+    id: "172",
+    title: "Orobas",
+    composer: "Team Grimoire",
+    pack: "STORY",
+    levels: {
+      NORMAL: 7,
+      HARD: 14,
+      COSMOS: 18,
+    },
+  },
+  {
+    id: "173",
+    title: "OSHIKOME☆HEAVEN'S COOKING",
+    composer: "かゆき feat. ちょこ",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 7,
+      HARD: 13,
+      COSMOS: 17,
+    },
+  },
+  {
+    id: "174",
     title: "Our Waltz To the Moon",
     composer: "Scarlette",
     pack: "To the Moon Collaboration Pack",
@@ -982,7 +1917,7 @@ export const songs = [
     },
   },
   {
-    id: "90",
+    id: "175",
     title: "Overwrite (feat. 月乃)",
     composer: "INFX",
     pack: "Second Forte Pack",
@@ -993,7 +1928,7 @@ export const songs = [
     },
   },
   {
-    id: "91",
+    id: "176",
     title: "Pang Pang Fanfare",
     composer: "Mitsukiyo & seibin",
     pack: "Origin Vol.1",
@@ -1004,7 +1939,29 @@ export const songs = [
     },
   },
   {
-    id: "92",
+    id: "177",
+    title: "Party Time!!",
+    composer: "Nekoribo",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 7,
+      HARD: 13,
+      COSMOS: 17,
+    },
+  },
+  {
+    id: "178",
+    title: "PATHFINDER",
+    composer: "Scarlette",
+    pack: "STORY",
+    levels: {
+      NORMAL: 1,
+      HARD: 9,
+      COSMOS: 16,
+    },
+  },
+  {
+    id: "179",
     title: "Pica Pica",
     composer: "horoscope a.k.a. LUZE",
     pack: "Second Forte Pack",
@@ -1015,7 +1972,18 @@ export const songs = [
     },
   },
   {
-    id: "93",
+    id: "180",
+    title: "picotxlink",
+    composer: "7mai",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 5,
+      HARD: 13,
+      COSMOS: 17,
+    },
+  },
+  {
+    id: "181",
     title: "Project \"Blue Bird\"",
     composer: "Scarlette",
     pack: "Fourth Forte Pack",
@@ -1026,7 +1994,29 @@ export const songs = [
     },
   },
   {
-    id: "94",
+    id: "182",
+    title: "Psychometry",
+    composer: "HyuN",
+    pack: "STORY",
+    levels: {
+      NORMAL: 5,
+      HARD: 13,
+      COSMOS: 16,
+    },
+  },
+  {
+    id: "183",
+    title: "PUPA",
+    composer: "モリモリあつし",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 7,
+      HARD: 15,
+      COSMOS: 18,
+    },
+  },
+  {
+    id: "184",
     title: "PUPA (Endorfin. Remix)",
     composer: "モリモリあつし Remixed by Endorfin.",
     pack: "Mass Recall Omega",
@@ -1037,7 +2027,7 @@ export const songs = [
     },
   },
   {
-    id: "95",
+    id: "185",
     title: "PUPA (GRG REMIX)",
     composer: "モリモリあつし Remixed by ガリガリさむし",
     pack: "Mass Recall Omega",
@@ -1048,7 +2038,7 @@ export const songs = [
     },
   },
   {
-    id: "96",
+    id: "186",
     title: "PUPA (Sakuzyo Latin Remix)",
     composer: "モリモリあつし Remixed by Sakuzyo",
     pack: "Mass Recall Omega",
@@ -1059,7 +2049,7 @@ export const songs = [
     },
   },
   {
-    id: "97",
+    id: "187",
     title: "Ragnarok (Roy Mikelate Remix)",
     composer: "Earliri",
     pack: "Deeeer Simulator Collaboration Pack",
@@ -1070,7 +2060,84 @@ export const songs = [
     },
   },
   {
-    id: "98",
+    id: "188",
+    title: "Raindrop",
+    composer: "seatrus",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 4,
+      HARD: 13,
+      COSMOS: 16,
+    },
+  },
+  {
+    id: "189",
+    title: "Rainy Waltz",
+    composer: "a_hisa",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 2,
+      HARD: 10,
+      COSMOS: 15,
+    },
+  },
+  {
+    id: "190",
+    title: "Rapsodie fer za Cactuses (*'v'*)",
+    composer: "Spiegel vs Ice",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 7,
+      HARD: 13,
+      COSMOS: 17,
+    },
+  },
+  {
+    id: "191",
+    title: "Re:birth",
+    composer: "ああああ",
+    pack: "STORY",
+    levels: {
+      NORMAL: 7,
+      HARD: 12,
+      COSMOS: 17,
+    },
+  },
+  {
+    id: "192",
+    title: "Re:End of a Dream",
+    composer: "uma vs. モリモリあつし",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 7,
+      HARD: 13,
+      COSMOS: 18,
+    },
+  },
+  {
+    id: "193",
+    title: "RE:UNION -Duo Blade Against-",
+    composer: "Ice vs. Morimori Atsushi",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 7,
+      HARD: 14,
+      COSMOS: 18,
+    },
+  },
+  {
+    id: "194",
+    title: "Red Bullet feat.はらもりよしな",
+    composer: "TAKIO",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 6,
+      HARD: 12,
+      COSMOS: 17,
+    },
+  },
+  {
+    id: "195",
     title: "Réfraction d'eau, Op. 3",
     composer: "Raimukun",
     pack: "Origin Vol.1",
@@ -1081,7 +2148,7 @@ export const songs = [
     },
   },
   {
-    id: "99",
+    id: "196",
     title: "Reload Future (feat.タイココちゃんねる)",
     composer: "INFX & MIIM",
     pack: "Third Forte Pack",
@@ -1092,7 +2159,18 @@ export const songs = [
     },
   },
   {
-    id: "100",
+    id: "197",
+    title: "RESSiSTANCE",
+    composer: "ぐるたみん",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 5,
+      HARD: 14,
+      COSMOS: 17,
+    },
+  },
+  {
+    id: "198",
     title: "Restricted Access",
     composer: "Knighthood",
     pack: "Paradigm: Reboot Collaboration Pack",
@@ -1103,7 +2181,7 @@ export const songs = [
     },
   },
   {
-    id: "101",
+    id: "199",
     title: "Retaliation",
     composer: "Juggernaut.",
     pack: "Third Forte Pack",
@@ -1114,7 +2192,40 @@ export const songs = [
     },
   },
   {
-    id: "102",
+    id: "200",
+    title: "Revenant",
+    composer: "Juggernaut.",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 7,
+      HARD: 14,
+      COSMOS: 18,
+    },
+  },
+  {
+    id: "201",
+    title: "Revival of Kalpa",
+    composer: "Scarlette",
+    pack: "STORY",
+    levels: {
+      NORMAL: 6,
+      HARD: 10,
+      COSMOS: 16,
+    },
+  },
+  {
+    id: "202",
+    title: "REVØCATE",
+    composer: "kuro",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 8,
+      HARD: 13,
+      COSMOS: 17,
+    },
+  },
+  {
+    id: "203",
     title: "Rrhar'il",
     composer: "Team Grimoire",
     pack: "Phigros Collaboration Pack",
@@ -1125,7 +2236,29 @@ export const songs = [
     },
   },
   {
-    id: "103",
+    id: "204",
+    title: "RUSH prod.Scarlette",
+    composer: "K.DaeHwan & Scarlette",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 4,
+      HARD: 13,
+      COSMOS: 17,
+    },
+  },
+  {
+    id: "205",
+    title: "Sadachbia",
+    composer: "Evin a'k",
+    pack: "STORY",
+    levels: {
+      NORMAL: 3,
+      HARD: 13,
+      COSMOS: 18,
+    },
+  },
+  {
+    id: "206",
     title: "Sadalsuud",
     composer: "Evin a'k",
     pack: "Second Forte Pack",
@@ -1136,7 +2269,7 @@ export const songs = [
     },
   },
   {
-    id: "104",
+    id: "207",
     title: "Satellite Adventure",
     composer: "pan",
     pack: "Third Forte Pack",
@@ -1147,7 +2280,7 @@ export const songs = [
     },
   },
   {
-    id: "105",
+    id: "208",
     title: "Secret Illumination",
     composer: "Yooh",
     pack: "Rotaeno Collaboration Pack",
@@ -1158,7 +2291,7 @@ export const songs = [
     },
   },
   {
-    id: "106",
+    id: "209",
     title: "Secret Illumination (seatrus's “The AURA” Remix)",
     composer: "seatrus",
     pack: "Rotaeno Collaboration Pack",
@@ -1169,7 +2302,18 @@ export const songs = [
     },
   },
   {
-    id: "107",
+    id: "210",
+    title: "Seven Days of Genesis(Viollin：Scarlette)",
+    composer: "Ice",
+    pack: "STORY",
+    levels: {
+      NORMAL: 5,
+      HARD: 12,
+      COSMOS: 17,
+    },
+  },
+  {
+    id: "211",
     title: "skip&step",
     composer: "Mono.",
     pack: "Third Forte Pack",
@@ -1180,7 +2324,7 @@ export const songs = [
     },
   },
   {
-    id: "108",
+    id: "212",
     title: "Skyline",
     composer: "Koto Spirit",
     pack: "Fourth Forte Pack",
@@ -1191,7 +2335,7 @@ export const songs = [
     },
   },
   {
-    id: "109",
+    id: "213",
     title: "Snow Desert",
     composer: "WyvernP",
     pack: "Phigros Collaboration Pack",
@@ -1202,7 +2346,51 @@ export const songs = [
     },
   },
   {
-    id: "110",
+    id: "214",
+    title: "Solstice",
+    composer: "void (Mournfinale)",
+    pack: "STORY",
+    levels: {
+      NORMAL: 7,
+      HARD: 14,
+      COSMOS: 18,
+    },
+  },
+  {
+    id: "215",
+    title: "Soulwind",
+    composer: "HyuN",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 6,
+      HARD: 14,
+      COSMOS: 17,
+    },
+  },
+  {
+    id: "216",
+    title: "Sound Chimera",
+    composer: "Laur",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 7,
+      HARD: 13,
+      COSMOS: 17,
+    },
+  },
+  {
+    id: "217",
+    title: "SPïKA",
+    composer: "Rigël Theatre",
+    pack: "STORY",
+    levels: {
+      NORMAL: 3,
+      HARD: 12,
+      COSMOS: 16,
+    },
+  },
+  {
+    id: "218",
     title: "Spinel",
     composer: "ぺのれり",
     pack: "Rotaeno Collaboration Pack",
@@ -1213,7 +2401,29 @@ export const songs = [
     },
   },
   {
-    id: "111",
+    id: "219",
+    title: "ST4RDUST☆XABER",
+    composer: "Mono.",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 2,
+      HARD: 13,
+      COSMOS: 19,
+    },
+  },
+  {
+    id: "220",
+    title: "Star Sand Melts With Angel Tears",
+    composer: "Koki Sasaguchi",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 7,
+      HARD: 13,
+      COSMOS: 17,
+    },
+  },
+  {
+    id: "221",
     title: "STARGATE EXTREME",
     composer: "KARUT",
     pack: "SixtarGate Collaboration Pack",
@@ -1224,7 +2434,7 @@ export const songs = [
     },
   },
   {
-    id: "112",
+    id: "222",
     title: "StellaR-MemoriA",
     composer: "Raphiiel",
     pack: "SixtarGate Collaboration Pack",
@@ -1235,7 +2445,51 @@ export const songs = [
     },
   },
   {
-    id: "113",
+    id: "223",
+    title: "Sunset Toybox",
+    composer: "テヅカ x Aoi feat.桃雛なの",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 7,
+      HARD: 12,
+      COSMOS: 17,
+    },
+  },
+  {
+    id: "224",
+    title: "Swift Transaction",
+    composer: "PTB",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 4,
+      HARD: 13,
+      COSMOS: 16,
+    },
+  },
+  {
+    id: "225",
+    title: "Swing of the Bumblebee",
+    composer: "a_hisa",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 7,
+      HARD: 13,
+      COSMOS: 18,
+    },
+  },
+  {
+    id: "226",
+    title: "Symphony for the Revival",
+    composer: "Scarlette",
+    pack: "STORY",
+    levels: {
+      NORMAL: 1,
+      HARD: 11,
+      COSMOS: 16,
+    },
+  },
+  {
+    id: "227",
     title: "Take Me Beyond",
     composer: "KARUT",
     pack: "Origin Vol.1",
@@ -1246,7 +2500,40 @@ export const songs = [
     },
   },
   {
-    id: "114",
+    id: "228",
+    title: "Tei-Tie-Breaker",
+    composer: "Haraki C-take",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 7,
+      HARD: 15,
+      COSMOS: 18,
+    },
+  },
+  {
+    id: "229",
+    title: "That Glacier",
+    composer: "Glancia",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 8,
+      HARD: 12,
+      COSMOS: 17,
+    },
+  },
+  {
+    id: "230",
+    title: "The Arcticlight",
+    composer: "-45",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 7,
+      HARD: 13,
+      COSMOS: 16,
+    },
+  },
+  {
+    id: "231",
     title: "The Evacuation",
     composer: "Planetboom",
     pack: "Origin Vol.1",
@@ -1257,7 +2544,18 @@ export const songs = [
     },
   },
   {
-    id: "115",
+    id: "232",
+    title: "The Formula",
+    composer: "Junk",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 6,
+      HARD: 15,
+      COSMOS: 17,
+    },
+  },
+  {
+    id: "233",
     title: "The Formula (HISPEED REMIX)",
     composer: "Junk",
     pack: "Mass Recall Omega",
@@ -1268,7 +2566,18 @@ export const songs = [
     },
   },
   {
-    id: "116",
+    id: "234",
+    title: "The Last Page",
+    composer: "ARForest",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 5,
+      HARD: 11,
+      COSMOS: 16,
+    },
+  },
+  {
+    id: "235",
     title: "The Last Page (ESAI Remix)",
     composer: "ESAI",
     pack: "Mass Recall Omega",
@@ -1279,7 +2588,7 @@ export const songs = [
     },
   },
   {
-    id: "117",
+    id: "236",
     title: "The Promised Land",
     composer: "Iris feat. LynH",
     pack: "Rotaeno Collaboration Pack",
@@ -1290,7 +2599,40 @@ export const songs = [
     },
   },
   {
-    id: "118",
+    id: "237",
+    title: "The Riot Reigns",
+    composer: "BLV3HAZUKI",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 5,
+      HARD: 13,
+      COSMOS: 16,
+    },
+  },
+  {
+    id: "238",
+    title: "Thunderstorm Road",
+    composer: "yuudo",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 6,
+      HARD: 14,
+      COSMOS: 18,
+    },
+  },
+  {
+    id: "239",
+    title: "Time To Night Sky feat. Lee Yu Jin",
+    composer: "HyuN & KLYDIX",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 3,
+      HARD: 10,
+      COSMOS: 15,
+    },
+  },
+  {
+    id: "240",
     title: "To the Moon Main Theme",
     composer: "Kan Gao",
     pack: "To the Moon Collaboration Pack",
@@ -1301,9 +2643,31 @@ export const songs = [
     },
   },
   {
-    id: "119",
+    id: "241",
+    title: "Travel Begins",
+    composer: "ARForest",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 7,
+      HARD: 10,
+      COSMOS: 16,
+    },
+  },
+  {
+    id: "242",
+    title: "Twilight Concerto(黄昏の協奏曲)",
+    composer: "Scarlette",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 4,
+      HARD: 14,
+      COSMOS: 17,
+    },
+  },
+  {
+    id: "243",
     title: "Vale",
-    composer: "削除 (Sakuzyo)",
+    composer: "削除(Sakuzyo)",
     pack: "Origin Vol. 2 Pack",
     levels: {
       NORMAL: 3,
@@ -1312,7 +2676,40 @@ export const songs = [
     },
   },
   {
-    id: "120",
+    id: "244",
+    title: "Valedict",
+    composer: "void",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 6,
+      HARD: 12,
+      COSMOS: 16,
+    },
+  },
+  {
+    id: "245",
+    title: "VALHALLA Melancholy",
+    composer: "Jehezukiel",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 3,
+      HARD: 12,
+      COSMOS: 16,
+    },
+  },
+  {
+    id: "246",
+    title: "Valkyrie",
+    composer: "Laur",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 6,
+      HARD: 13,
+      COSMOS: 17,
+    },
+  },
+  {
+    id: "247",
     title: "Ventora Nova",
     composer: "ぺのれり",
     pack: "Origin Vol. 2 Pack",
@@ -1323,7 +2720,7 @@ export const songs = [
     },
   },
   {
-    id: "121",
+    id: "248",
     title: "VERUM - proximus",
     composer: "Sera Amagi",
     pack: "Second Forte Pack",
@@ -1334,7 +2731,7 @@ export const songs = [
     },
   },
   {
-    id: "122",
+    id: "249",
     title: "Vicious Mockery",
     composer: "Kry.exe",
     pack: "Rizline Collaboration Pack",
@@ -1345,7 +2742,7 @@ export const songs = [
     },
   },
   {
-    id: "123",
+    id: "250",
     title: "VIKTØRIA",
     composer: "Tatsunoshin",
     pack: "Origin Vol. 2 Pack",
@@ -1356,7 +2753,7 @@ export const songs = [
     },
   },
   {
-    id: "124",
+    id: "251",
     title: "Viyella's Melancholy",
     composer: "Laur",
     pack: "Paradigm: Reboot Collaboration Pack",
@@ -1367,7 +2764,7 @@ export const songs = [
     },
   },
   {
-    id: "125",
+    id: "252",
     title: "Waltz for Lorelei",
     composer: "Sobrem & 庭師",
     pack: "Rotaeno Collaboration Pack",
@@ -1378,7 +2775,7 @@ export const songs = [
     },
   },
   {
-    id: "126",
+    id: "253",
     title: "Wipe Until It Hurts",
     composer: "TORIENA",
     pack: "Origin Vol. 2 Pack",
@@ -1389,7 +2786,7 @@ export const songs = [
     },
   },
   {
-    id: "127",
+    id: "254",
     title: "Wolves Standing Towards Enemies",
     composer: "Camellia(EDP)",
     pack: "Lanota Collaboration Pack",
@@ -1400,7 +2797,18 @@ export const songs = [
     },
   },
   {
-    id: "128",
+    id: "255",
+    title: "World Brealer!! feat. BlueArpeggio",
+    composer: "Cansol",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 4,
+      HARD: 14,
+      COSMOS: 17,
+    },
+  },
+  {
+    id: "256",
     title: "WToF (Keyboard-Breaking Mix)",
     composer: "Scarlette",
     pack: "Deeeer Simulator Collaboration Pack",
@@ -1411,7 +2819,7 @@ export const songs = [
     },
   },
   {
-    id: "129",
+    id: "257",
     title: "You are the Miserable",
     composer: "t+pazolite",
     pack: "Lanota Collaboration Pack",
@@ -1422,7 +2830,7 @@ export const songs = [
     },
   },
   {
-    id: "130",
+    id: "258",
     title: "Your Mind",
     composer: "Roy Mikelate",
     pack: "Second Forte Pack",
@@ -1433,7 +2841,7 @@ export const songs = [
     },
   },
   {
-    id: "131",
+    id: "259",
     title: "ΤεμπεΣΤ",
     composer: "Zekk",
     pack: "Lanota Collaboration Pack",
@@ -1444,7 +2852,18 @@ export const songs = [
     },
   },
   {
-    id: "132",
+    id: "260",
+    title: "ЯeИ atus",
+    composer: "天束 feat.ぽめ",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 5,
+      HARD: 13,
+      COSMOS: 17,
+    },
+  },
+  {
+    id: "261",
     title: "ЯеИatus",
     composer: "天束 feat.ぽめ",
     pack: "Berry Melody Collaboration Pack",
@@ -1455,7 +2874,29 @@ export const songs = [
     },
   },
   {
-    id: "133",
+    id: "262",
+    title: "悪魔の御掌(Devil's Palm)",
+    composer: "Kurokotei / 黒皇帝",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 9,
+      HARD: 14,
+      COSMOS: 19,
+    },
+  },
+  {
+    id: "263",
+    title: "歌わなければ届かない、宇宙まで",
+    composer: "Sera Amagi",
+    pack: "STORY",
+    levels: {
+      NORMAL: 3,
+      HARD: 11,
+      COSMOS: 16,
+    },
+  },
+  {
+    id: "264",
     title: "か(KA)",
     composer: "立秋 feat.ちょこ",
     pack: "Origin Vol. 2 Pack",
@@ -1466,7 +2907,7 @@ export const songs = [
     },
   },
   {
-    id: "134",
+    id: "265",
     title: "キミとボクへの葬送歌",
     composer: "Rokina",
     pack: "First Forte",
@@ -1477,7 +2918,7 @@ export const songs = [
     },
   },
   {
-    id: "135",
+    id: "266",
     title: "タイムカプセル",
     composer: "モリモリあつし",
     pack: "Fourth Forte Pack",
@@ -1488,7 +2929,29 @@ export const songs = [
     },
   },
   {
-    id: "136",
+    id: "267",
+    title: "東方兔傳說 -SKY DEFENDER-",
+    composer: "sctl",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 7,
+      HARD: 13,
+      COSMOS: 17,
+    },
+  },
+  {
+    id: "268",
+    title: "ねむねむにゃんこパラダイス feat.Kyue",
+    composer: "かゆき(Guiatr：deli.)",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 2,
+      HARD: 10,
+      COSMOS: 16,
+    },
+  },
+  {
+    id: "269",
     title: "ヒアソビ(Play-With-Fire/Hiasobi)",
     composer: "Camellia",
     pack: "Camellia Pack",
@@ -1499,7 +2962,40 @@ export const songs = [
     },
   },
   {
-    id: "137",
+    id: "270",
+    title: "非日常スケッチブック (Unusual Sketchbook)",
+    composer: "後藤 feat. Nayuta",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 6,
+      HARD: 12,
+      COSMOS: 16,
+    },
+  },
+  {
+    id: "271",
+    title: "吹華咲乱(SuikaKyouran)",
+    composer: "Now Field",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 7,
+      HARD: 13,
+      COSMOS: 16,
+    },
+  },
+  {
+    id: "272",
+    title: "粉骨砕身カジノゥ",
+    composer: "モリモリあつし",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 6,
+      HARD: 14,
+      COSMOS: 17,
+    },
+  },
+  {
+    id: "273",
     title: "ベースラインやってる？笑",
     composer: "Camellia",
     pack: "Camellia Pack",
@@ -1510,7 +3006,18 @@ export const songs = [
     },
   },
   {
-    id: "138",
+    id: "274",
+    title: "もぺもぺ",
+    composer: "LeaF",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 5,
+      HARD: 10,
+      COSMOS: 16,
+    },
+  },
+  {
+    id: "275",
     title: "もぺもぺ(Roy Mikelate Remix)(Mopemope)",
     composer: "Roy Mikelate",
     pack: "Mass Recall Omega",
@@ -1521,7 +3028,7 @@ export const songs = [
     },
   },
   {
-    id: "139",
+    id: "276",
     title: "夏色レモンタルト Feat.薛南",
     composer: "XinG",
     pack: "Fourth Forte Pack",
@@ -1532,7 +3039,18 @@ export const songs = [
     },
   },
   {
-    id: "140",
+    id: "277",
+    title: "너를 그리는 밤하늘의 이야기 prod. Scarlette (Planetarium)",
+    composer: "Kyue & kuripurin & MYULee",
+    pack: "ORIGINAL",
+    levels: {
+      NORMAL: 2,
+      HARD: 11,
+      COSMOS: 16,
+    },
+  },
+  {
+    id: "278",
     title: "極彩色のユートピア(Gokusaisoku no Utopia)",
     composer: "HyuN feat. kradness",
     pack: "Rotaeno Collaboration Pack",
@@ -1543,7 +3061,7 @@ export const songs = [
     },
   },
   {
-    id: "141",
+    id: "279",
     title: "雪降り、メリクリ(Snowfall and Merry Chrishmas)",
     composer: "A-39",
     pack: "Phigros Collaboration Pack",
@@ -1554,7 +3072,7 @@ export const songs = [
     },
   },
   {
-    id: "142",
+    id: "280",
     title: "無彩色のディストピア(Achromatci Dystopia)",
     composer: "HyuN feat. ウォルピスカーター",
     pack: "Rotaeno Collaboration Pack",
@@ -1565,13 +3083,24 @@ export const songs = [
     },
   },
   {
-    id: "143",
+    id: "281",
     title: "무지개 반사(Rainbow Reflex)",
     composer: "Doin",
     pack: "Origin Vol.1",
     levels: {
       NORMAL: 5,
       HARD: 11,
+      COSMOS: 16,
+    },
+  },
+  {
+    id: "282",
+    title: "함께 그리는 밤하늘의 이야기 (Planetarium：Constellations)",
+    composer: "Scarlette",
+    pack: "STORY",
+    levels: {
+      NORMAL: 4,
+      HARD: 12,
       COSMOS: 16,
     },
   },
