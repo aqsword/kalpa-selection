@@ -747,10 +747,6 @@ select:focus-visible {
   background: rgb(255 255 255 / 40%);
 }
 
-.song-card.is-banned {
-  opacity: 0.42;
-}
-
 .song-copy {
   min-width: 0;
 }
@@ -872,6 +868,98 @@ select:focus-visible {
   font-size: 10px;
 }
 
+.ban-library {
+  margin-bottom: 96px;
+  border: 1px solid var(--ink);
+  background: #e7e4dc;
+}
+
+.ban-library-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 27px 30px;
+  border-bottom: 1px solid var(--ink);
+}
+
+.ban-library-heading > div:first-child {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.ban-library-heading h2 {
+  margin: 0;
+  font-family: "Trebuchet MS", "Yu Gothic", sans-serif;
+  font-size: 20px;
+  letter-spacing: -0.03em;
+}
+
+.ban-library-heading div p {
+  margin: 5px 0 0;
+  color: var(--muted);
+  font-size: 9px;
+}
+
+.ban-library-heading > p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.ban-library-heading > p strong {
+  color: var(--ink);
+  font-family: "Trebuchet MS", "Yu Gothic", sans-serif;
+  font-size: 22px;
+}
+
+.banned-song-list {
+  padding: 0 30px;
+}
+
+.banned-song-card {
+  display: grid;
+  grid-template-columns: minmax(230px, 1fr) minmax(360px, auto) 74px;
+  align-items: center;
+  gap: 26px;
+  min-height: 106px;
+  border-bottom: 1px solid #c6c3ba;
+}
+
+.banned-song-card:last-child {
+  border-bottom: 0;
+}
+
+.unban-button {
+  display: grid;
+  gap: 2px;
+  min-height: 52px;
+  place-items: center;
+  border: 1px solid #aaa79f;
+  background: var(--ink);
+  color: white;
+  font-size: 8px;
+  font-weight: 700;
+}
+
+.unban-button span {
+  color: var(--acid);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.unban-button:hover {
+  border-color: var(--acid);
+}
+
+.ban-empty {
+  margin: 0;
+  padding: 34px 30px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
 footer {
   display: flex;
   justify-content: space-between;
@@ -901,7 +989,8 @@ footer {
     border-left: 0;
   }
 
-  .song-card {
+  .song-card,
+  .banned-song-card {
     grid-template-columns: 1fr 74px;
     padding: 20px 0;
   }
@@ -912,7 +1001,8 @@ footer {
     justify-content: flex-start;
   }
 
-  .ban-button {
+  .ban-button,
+  .unban-button {
     grid-column: 2;
     grid-row: 1;
   }
@@ -974,8 +1064,25 @@ footer {
     padding: 60px 0 72px;
   }
 
-  .song-card {
+  .song-card,
+  .banned-song-card {
     gap: 14px;
+  }
+
+  .ban-library {
+    margin-bottom: 72px;
+  }
+
+  .ban-library-heading {
+    padding: 22px 20px;
+  }
+
+  .banned-song-list {
+    padding: 0 20px;
+  }
+
+  .ban-empty {
+    padding: 28px 20px;
   }
 
   .chart-list {
