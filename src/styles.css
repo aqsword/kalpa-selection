@@ -367,6 +367,43 @@ select:focus-visible {
   font-size: 10px;
 }
 
+.selection-count-control {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: -12px 0 14px;
+  color: #aaa;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.selection-count-control > div {
+  display: flex;
+  border: 1px solid #454545;
+}
+
+.selection-count-control button {
+  min-width: 52px;
+  min-height: 34px;
+  padding: 0 10px;
+  border: 0;
+  border-right: 1px solid #454545;
+  background: transparent;
+  color: #aaa;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.selection-count-control button:last-child {
+  border-right: 0;
+}
+
+.selection-count-control button[aria-pressed="true"] {
+  background: var(--acid);
+  color: var(--ink);
+}
+
 .selection-display {
   display: flex;
   flex: 1;
@@ -399,12 +436,67 @@ select:focus-visible {
 }
 
 .selection-display.has-selection {
-  align-items: flex-start;
-  justify-content: flex-end;
+  align-items: stretch;
+  justify-content: stretch;
+  padding: 0;
   background:
     radial-gradient(circle at 88% 12%, rgb(217 255 67 / 22%), transparent 38%),
     #202020;
   text-align: left;
+}
+
+.selection-results {
+  display: flex;
+  width: 100%;
+  min-height: 283px;
+  flex-direction: column;
+}
+
+.selection-result {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid #3e3e3e;
+}
+
+.selection-result:last-of-type {
+  border-bottom: 0;
+}
+
+.result-count-1 .selection-result {
+  justify-content: flex-end;
+  padding: 28px;
+}
+
+.result-count-2 .selection-result h3,
+.result-count-3 .selection-result h3 {
+  font-size: clamp(20px, 2.3vw, 29px);
+}
+
+.result-count-2 .selection-kicker,
+.result-count-3 .selection-kicker {
+  margin-bottom: 7px;
+}
+
+.result-count-2 .selection-composer,
+.result-count-3 .selection-composer {
+  margin: 5px 0 10px !important;
+}
+
+.result-count-2 .selection-meta strong,
+.result-count-3 .selection-meta strong {
+  font-size: 15px;
+}
+
+.selection-shortage {
+  margin: 0;
+  padding: 9px 16px;
+  border-top: 1px solid #3e3e3e;
+  color: #aaa;
+  font-size: 9px;
+  text-align: center;
 }
 
 .selection-kicker {

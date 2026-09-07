@@ -79,22 +79,34 @@ export function pickRandomCandidate(
   candidates: readonly Candidate[],
   random: () => number = Math.random,
 ): RandomSelection | null {
-  if (candidates.length === 0) {
-    return null;
+  return pickRandomCandidates(candidates, 1, random)[0] ?? null;
+}
+
+export function pickRandomCandidates(
+  candidates: readonly Candidate[],
+  count: number,
+  random: () => number = Math.random,
+): RandomSelection[] {
+  const pool = [...candidates];
+  const selectionCount = Math.min(Math.max(0, Math.floor(count)), pool.length);
+  const selections: RandomSelection[] = [];
+
+  for (let index = 0; index < selectionCount; index += 1) {
+    const candidateIndex = Math.min(
+      Math.floor(random() * pool.length),
+      pool.length - 1,
+    );
+    const [candidate] = pool.splice(candidateIndex, 1);
+    const chartIndex = Math.min(
+      Math.floor(random() * candidate.charts.length),
+      candidate.charts.length - 1,
+    );
+
+    selections.push({
+      song: candidate.song,
+      chart: candidate.charts[chartIndex],
+    });
   }
 
-  const candidateIndex = Math.min(
-    Math.floor(random() * candidates.length),
-    candidates.length - 1,
-  );
-  const candidate = candidates[candidateIndex];
-  const chartIndex = Math.min(
-    Math.floor(random() * candidate.charts.length),
-    candidate.charts.length - 1,
-  );
-
-  return {
-    song: candidate.song,
-    chart: candidate.charts[chartIndex],
-  };
+  return selections;
 }

@@ -5,6 +5,7 @@ import {
   getCandidates,
   getMatchingCharts,
   pickRandomCandidate,
+  pickRandomCandidates,
   type SongFilters,
 } from "./selection";
 
@@ -97,5 +98,23 @@ describe("pickRandomCandidate", () => {
 
   it("候補がなければnullを返す", () => {
     assert.equal(pickRandomCandidate([]), null);
+  });
+});
+
+describe("pickRandomCandidates", () => {
+  it("指定した曲数を重複なしで選ぶ", () => {
+    const candidates = getCandidates(sampleSongs, emptyFilters);
+    const values = [0, 0, 0, 0];
+    const result = pickRandomCandidates(candidates, 2, () => values.shift() ?? 0);
+
+    assert.deepEqual(result.map(({ song }) => song.id), ["alpha", "beta"]);
+  });
+
+  it("指定数より候補が少ない場合は全候補を返す", () => {
+    const candidates = getCandidates(sampleSongs, emptyFilters);
+    const result = pickRandomCandidates(candidates, 3, () => 0);
+
+    assert.equal(result.length, 2);
+    assert.equal(new Set(result.map(({ song }) => song.id)).size, 2);
   });
 });

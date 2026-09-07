@@ -4,13 +4,16 @@ import {
   DIFFICULTIES,
   getCandidates,
   getSongCharts,
-  pickRandomCandidate,
+  pickRandomCandidates,
   type Difficulty,
   type RandomSelection,
 } from "./selection";
 
 const LEVELS = Array.from({ length: 20 }, (_, index) => index + 1);
+const SELECTION_COUNTS = [1, 2, 3] as const;
 const BAN_STORAGE_KEY = "kalpa-selection:banned-song-ids:v1";
+
+type SelectionCount = (typeof SELECTION_COUNTS)[number];
 
 const DIFFICULTY_LABELS: Record<Difficulty, string> = {
   NORMAL: "Normal",
@@ -44,7 +47,8 @@ function App() {
   const [difficulties, setDifficulties] = useState<Difficulty[]>([]);
   const [levels, setLevels] = useState<number[]>([]);
   const [bannedIds, setBannedIds] = useState<string[]>(getInitialBannedIds);
-  const [selection, setSelection] = useState<RandomSelection | null>(null);
+  const [selectionCount, setSelectionCount] = useState<SelectionCount>(1);
+  const [selections, setSelections] = useState<RandomSelection[]>([]);
 
   const composers = useMemo(
     () => [...new Set(songs.map((song) => song.composer))].sort((a, b) => a.localeCompare(b)),
@@ -70,7 +74,7 @@ function App() {
 
   function updateFilter(update: () => void): void {
     update();
-    setSelection(null);
+    setSelections([]);
   }
 
   function resetFilters(): void {
@@ -79,20 +83,20 @@ function App() {
     setPack("");
     setDifficulties([]);
     setLevels([]);
-    setSelection(null);
+    setSelections([]);
   }
 
   function toggleBan(songId: string): void {
     const nextIds = toggleValue(bannedIds, songId);
     setBannedIds(nextIds);
     window.localStorage.setItem(BAN_STORAGE_KEY, JSON.stringify(nextIds));
-    if (selection?.song.id === songId) {
-      setSelection(null);
+    if (selections.some(({ song }) => song.id === songId)) {
+      setSelections([]);
     }
   }
 
   function drawSong(): void {
-    setSelection(pickRandomCandidate(candidates));
+    setSelections(pickRandomCandidates(candidates, selectionCount));
   }
 
   return (
@@ -214,24 +218,55 @@ function App() {
               <span className="candidate-count">{candidates.length} 曲が候補</span>
             </div>
 
-            <div className={`selection-display${selection ? " has-selection" : ""}`} aria-live="polite">
-              {selection ? (
-                <>
-                  <p className="selection-kicker">YOUR NEXT TRACK</p>
-                  <h3>{selection.song.title}</h3>
-                  <p className="selection-composer">{selection.song.composer}</p>
-                  <div className="selection-meta">
-                    <span className={`chart-badge badge-${selection.chart.difficulty.toLowerCase()}`}>
-                      {selection.chart.difficulty}
-                    </span>
-                    <strong>{selection.chart.difficulty === "ASTRA" ? "★" : "Lv."}{selection.chart.level}</strong>
-                    <span>{selection.song.pack}</span>
-                  </div>
-                </>
+            <div className="selection-count-control">
+              <span>選出曲数</span>
+              <div role="group" aria-label="選出曲数">
+                {SELECTION_COUNTS.map((count) => (
+                  <button
+                    key={count}
+                    type="button"
+                    aria-pressed={selectionCount === count}
+                    onClick={() => {
+                      setSelectionCount(count);
+                      setSelections([]);
+                    }}
+                  >
+                    {count}曲
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div
+              className={`selection-display${selections.length > 0 ? ` has-selection result-count-${selections.length}` : ""}`}
+              aria-live="polite"
+            >
+              {selections.length > 0 ? (
+                <div className="selection-results">
+                  {selections.map((selection, index) => (
+                    <article className="selection-result" key={selection.song.id}>
+                      <p className="selection-kicker">
+                        {selections.length === 1 ? "YOUR NEXT TRACK" : `TRACK ${index + 1}`}
+                      </p>
+                      <h3>{selection.song.title}</h3>
+                      <p className="selection-composer">{selection.song.composer}</p>
+                      <div className="selection-meta">
+                        <span className={`chart-badge badge-${selection.chart.difficulty.toLowerCase()}`}>
+                          {selection.chart.difficulty}
+                        </span>
+                        <strong>{selection.chart.difficulty === "ASTRA" ? "★" : "Lv."}{selection.chart.level}</strong>
+                        <span>{selection.song.pack}</span>
+                      </div>
+                    </article>
+                  ))}
+                  {selections.length < selectionCount && (
+                    <p className="selection-shortage">候補が{selections.length}曲のため、全候補を選出しました。</p>
+                  )}
+                </div>
               ) : (
                 <>
                   <span className="roulette-mark" aria-hidden="true">✦</span>
-                  <p>{candidates.length > 0 ? "条件を決めたら、選出ボタンを押してください。" : "条件に合う選出候補がありません。"}</p>
+                  <p>{candidates.length > 0 ? `${selectionCount}曲を重複なしで選出します。` : "条件に合う選出候補がありません。"}</p>
                 </>
               )}
             </div>
@@ -242,7 +277,7 @@ function App() {
               onClick={drawSong}
               disabled={candidates.length === 0}
             >
-              <span>{selection ? "もう一度選ぶ" : "ランダムに選ぶ"}</span>
+              <span>{selections.length > 0 ? "もう一度選ぶ" : `${selectionCount}曲をランダムに選ぶ`}</span>
               <span aria-hidden="true">→</span>
             </button>
             <p className="draw-note">BANした曲は選出候補から除外されます。</p>
