@@ -707,7 +707,7 @@ select:focus-visible {
 }
 
 .library {
-  padding: 76px 0 96px;
+  padding: 42px 0 96px;
 }
 
 .library-heading {
@@ -869,48 +869,97 @@ select:focus-visible {
 }
 
 .ban-library {
-  margin-bottom: 96px;
+  margin-top: 76px;
   border: 1px solid var(--ink);
   background: #e7e4dc;
 }
 
 .ban-library-heading {
   display: flex;
+  width: 100%;
   align-items: center;
   justify-content: space-between;
   padding: 27px 30px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+}
+
+.ban-library.is-open .ban-library-heading {
   border-bottom: 1px solid var(--ink);
 }
 
-.ban-library-heading > div:first-child {
+.ban-heading-copy {
   display: flex;
   align-items: flex-start;
   gap: 15px;
 }
 
-.ban-library-heading h2 {
-  margin: 0;
+.ban-heading-title {
+  display: block;
   font-family: "Trebuchet MS", "Yu Gothic", sans-serif;
   font-size: 20px;
+  font-weight: 700;
   letter-spacing: -0.03em;
 }
 
-.ban-library-heading div p {
-  margin: 5px 0 0;
+.ban-heading-note {
+  display: block;
+  margin-top: 5px;
   color: var(--muted);
   font-size: 9px;
 }
 
-.ban-library-heading > p {
-  margin: 0;
+.ban-heading-status {
+  display: flex;
+  align-items: center;
+  gap: 20px;
   color: var(--muted);
   font-size: 10px;
 }
 
-.ban-library-heading > p strong {
+.ban-heading-status strong {
   color: var(--ink);
   font-family: "Trebuchet MS", "Yu Gothic", sans-serif;
   font-size: 22px;
+}
+
+.ban-chevron {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  border: 1px solid #aaa79f;
+  color: var(--ink);
+  font-size: 17px;
+  line-height: 1;
+  transition: transform 180ms ease, background 180ms ease;
+}
+
+.ban-library-heading:hover .ban-chevron {
+  background: var(--acid);
+}
+
+.ban-library.is-open .ban-chevron {
+  transform: rotate(180deg);
+}
+
+.ban-library-content {
+  animation: open-ban-list 180ms ease-out;
+  transform-origin: top;
+}
+
+@keyframes open-ban-list {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .banned-song-list {
@@ -1061,7 +1110,7 @@ footer {
   }
 
   .library {
-    padding: 60px 0 72px;
+    padding: 38px 0 72px;
   }
 
   .song-card,
@@ -1070,7 +1119,7 @@ footer {
   }
 
   .ban-library {
-    margin-bottom: 72px;
+    margin-top: 60px;
   }
 
   .ban-library-heading {

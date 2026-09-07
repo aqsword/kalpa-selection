@@ -62,6 +62,7 @@ function App() {
   const [previewSelections, setPreviewSelections] = useState<RandomSelection[]>([]);
   const [animationEnabled, setAnimationEnabled] = useState(getInitialAnimationEnabled);
   const [animationPhase, setAnimationPhase] = useState<AnimationPhase>("idle");
+  const [isBanListOpen, setIsBanListOpen] = useState(false);
   const animationTimers = useRef<number[]>([]);
   const animationRun = useRef(0);
 
@@ -128,9 +129,13 @@ function App() {
 
   function toggleBan(songId: string): void {
     cancelAnimation();
+    const isAddingToBanList = !bannedSet.has(songId);
     const nextIds = toggleValue(bannedIds, songId);
     setBannedIds(nextIds);
     window.localStorage.setItem(BAN_STORAGE_KEY, JSON.stringify(nextIds));
+    if (isAddingToBanList) {
+      setIsBanListOpen(true);
+    }
     if (selections.some(({ song }) => song.id === songId)) {
       setSelections([]);
     }
@@ -405,10 +410,71 @@ function App() {
           </section>
         </section>
 
+        <section
+          className={`ban-library${isBanListOpen ? " is-open" : ""}`}
+          aria-labelledby="ban-library-title"
+        >
+          <button
+            className="ban-library-heading"
+            type="button"
+            aria-expanded={isBanListOpen}
+            aria-controls="ban-library-content"
+            onClick={() => setIsBanListOpen((isOpen) => !isOpen)}
+          >
+            <span className="ban-heading-copy">
+              <span className="section-number">03</span>
+              <span>
+                <span className="ban-heading-title" id="ban-library-title">BANリスト</span>
+                <span className="ban-heading-note">ランダム選出と曲一覧から除外中</span>
+              </span>
+            </span>
+            <span className="ban-heading-status">
+              <span><strong>{bannedSongs.length}</strong> 曲</span>
+              <span className="ban-chevron" aria-hidden="true">⌄</span>
+            </span>
+          </button>
+
+          {isBanListOpen && (
+            <div className="ban-library-content" id="ban-library-content">
+              {bannedSongs.length > 0 ? (
+                <div className="banned-song-list">
+                  {bannedSongs.map((song) => (
+                    <article className="banned-song-card" key={song.id}>
+                      <div className="song-copy">
+                        <span className="pack-label">{song.pack}</span>
+                        <h3>{song.title}</h3>
+                        <p>{song.composer}</p>
+                      </div>
+                      <div className="chart-list" aria-label={`${song.title}の譜面`}>
+                        {getSongCharts(song).map((chart) => (
+                          <span className={`chart-item chart-${chart.difficulty.toLowerCase()}`} key={chart.difficulty}>
+                            <small>{chart.difficulty}</small>
+                            <strong>{chart.difficulty === "ASTRA" ? "★" : ""}{chart.level}</strong>
+                          </span>
+                        ))}
+                      </div>
+                      <button
+                        className="unban-button"
+                        type="button"
+                        onClick={() => toggleBan(song.id)}
+                      >
+                        <span aria-hidden="true">+</span>
+                        BAN解除
+                      </button>
+                    </article>
+                  ))}
+                </div>
+              ) : (
+                <p className="ban-empty">BANしている曲はありません。</p>
+              )}
+            </div>
+          )}
+        </section>
+
         <section className="library" aria-labelledby="library-title">
           <div className="library-heading">
             <div>
-              <span className="section-number">03</span>
+              <span className="section-number">04</span>
               <h2 id="library-title">曲一覧</h2>
             </div>
             <p><strong>{visibleSongs.length}</strong> / {songs.length} 曲</p>
@@ -452,50 +518,6 @@ function App() {
           )}
         </section>
 
-        <section className="ban-library" aria-labelledby="ban-library-title">
-          <div className="ban-library-heading">
-            <div>
-              <span className="section-number">04</span>
-              <div>
-                <h2 id="ban-library-title">BANリスト</h2>
-                <p>ランダム選出と上の曲一覧から除外中</p>
-              </div>
-            </div>
-            <p><strong>{bannedSongs.length}</strong> 曲</p>
-          </div>
-
-          {bannedSongs.length > 0 ? (
-            <div className="banned-song-list">
-              {bannedSongs.map((song) => (
-                <article className="banned-song-card" key={song.id}>
-                  <div className="song-copy">
-                    <span className="pack-label">{song.pack}</span>
-                    <h3>{song.title}</h3>
-                    <p>{song.composer}</p>
-                  </div>
-                  <div className="chart-list" aria-label={`${song.title}の譜面`}>
-                    {getSongCharts(song).map((chart) => (
-                      <span className={`chart-item chart-${chart.difficulty.toLowerCase()}`} key={chart.difficulty}>
-                        <small>{chart.difficulty}</small>
-                        <strong>{chart.difficulty === "ASTRA" ? "★" : ""}{chart.level}</strong>
-                      </span>
-                    ))}
-                  </div>
-                  <button
-                    className="unban-button"
-                    type="button"
-                    onClick={() => toggleBan(song.id)}
-                  >
-                    <span aria-hidden="true">+</span>
-                    BAN解除
-                  </button>
-                </article>
-              ))}
-            </div>
-          ) : (
-            <p className="ban-empty">BANしている曲はありません。</p>
-          )}
-        </section>
       </main>
 
       <footer>
