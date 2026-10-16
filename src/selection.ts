@@ -33,8 +33,14 @@ function normalize(value: string): string {
 
 export function getSongCharts(song: Song): Chart[] {
   return DIFFICULTIES.flatMap((difficulty) => {
-    const level = song.levels[difficulty];
-    return level === undefined ? [] : [{ difficulty, level }];
+    const levels = song.levels[difficulty];
+    if (levels === undefined) {
+      return [];
+    }
+    return (typeof levels === "number" ? [levels] : levels).map((level) => ({
+      difficulty,
+      level,
+    }));
   });
 }
 

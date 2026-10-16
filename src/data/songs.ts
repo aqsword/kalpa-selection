@@ -22,6 +22,7 @@ export const songs = [
       NORMAL: 9,
       HARD: 15,
       COSMOS: 19,
+      ASTRA: [4],
     },
   },
   {
@@ -33,6 +34,7 @@ export const songs = [
       NORMAL: 4,
       HARD: 13,
       COSMOS: 17,
+      ASTRA: [4],
     },
   },
   {
@@ -44,6 +46,7 @@ export const songs = [
       NORMAL: 6,
       HARD: 13,
       COSMOS: 18,
+      ASTRA: [2],
     },
   },
   {
@@ -55,17 +58,19 @@ export const songs = [
       NORMAL: 6,
       HARD: 14,
       COSMOS: 18,
+      ASTRA: [3],
     },
   },
   {
     id: "6",
-    title: "Acataar ~ Reincarnation of Kalpa ~",
+    title: "Avataar ~ Reincarnation of Kalpa ~",
     composer: "Scarlette a.k.a. CrYmson",
     pack: "STORY",
     levels: {
       NORMAL: 6,
       HARD: 12,
       COSMOS: 17,
+      ASTRA: [3],
     },
   },
   {
@@ -77,6 +82,7 @@ export const songs = [
       NORMAL: 6,
       HARD: 15,
       COSMOS: 17,
+      ASTRA: [4],
     },
   },
   {
@@ -99,6 +105,7 @@ export const songs = [
       NORMAL: 7,
       HARD: 13,
       COSMOS: 17,
+      ASTRA: [3],
     },
   },
   {
@@ -121,6 +128,7 @@ export const songs = [
       NORMAL: 8,
       HARD: 13,
       COSMOS: 17,
+      ASTRA: [2],
     },
   },
   {
@@ -132,6 +140,7 @@ export const songs = [
       NORMAL: 6,
       HARD: 13,
       COSMOS: 17,
+      ASTRA: [3],
     },
   },
   {
@@ -143,6 +152,7 @@ export const songs = [
       NORMAL: 7,
       HARD: 12,
       COSMOS: 17,
+      ASTRA: [4],
     },
   },
   {
@@ -176,6 +186,7 @@ export const songs = [
       NORMAL: 8,
       HARD: 15,
       COSMOS: 18,
+      ASTRA: [4],
     },
   },
   {
@@ -187,6 +198,7 @@ export const songs = [
       NORMAL: 8,
       HARD: 15,
       COSMOS: 18,
+      ASTRA: [3],
     },
   },
   {
@@ -198,6 +210,7 @@ export const songs = [
       NORMAL: 11,
       HARD: 16,
       COSMOS: 20,
+      ASTRA: [4],
     },
   },
   {
@@ -220,6 +233,7 @@ export const songs = [
       NORMAL: 7,
       HARD: 14,
       COSMOS: 18,
+      ASTRA: [3],
     },
   },
   {
@@ -242,6 +256,7 @@ export const songs = [
       NORMAL: 1,
       HARD: 9,
       COSMOS: 15,
+      ASTRA: [1],
     },
   },
   {
@@ -286,6 +301,7 @@ export const songs = [
       NORMAL: 8,
       HARD: 16,
       COSMOS: 19,
+      ASTRA: [4],
     },
   },
   {
@@ -319,6 +335,7 @@ export const songs = [
       NORMAL: 5,
       HARD: 12,
       COSMOS: 18,
+      ASTRA: [3],
     },
   },
   {
@@ -330,6 +347,7 @@ export const songs = [
       NORMAL: 7,
       HARD: 13,
       COSMOS: 17,
+      ASTRA: [3],
     },
   },
   {
@@ -352,6 +370,7 @@ export const songs = [
       NORMAL: 5,
       HARD: 11,
       COSMOS: 16,
+      ASTRA: [3],
     },
   },
   {
@@ -374,6 +393,7 @@ export const songs = [
       NORMAL: 9,
       HARD: 15,
       COSMOS: 17,
+      ASTRA: [3],
     },
   },
   {
@@ -385,6 +405,7 @@ export const songs = [
       NORMAL: 8,
       HARD: 14,
       COSMOS: 18,
+      ASTRA: [4],
     },
   },
   {
@@ -418,6 +439,7 @@ export const songs = [
       NORMAL: 7,
       HARD: 14,
       COSMOS: 18,
+      ASTRA: [4],
     },
   },
   {
@@ -429,6 +451,7 @@ export const songs = [
       NORMAL: 4,
       HARD: 10,
       COSMOS: 17,
+      ASTRA: [2],
     },
   },
   {
@@ -440,6 +463,7 @@ export const songs = [
       NORMAL: 6,
       HARD: 13,
       COSMOS: 18,
+      ASTRA: [3],
     },
   },
   {
@@ -462,6 +486,7 @@ export const songs = [
       NORMAL: 4,
       HARD: 13,
       COSMOS: 17,
+      ASTRA: [3],
     },
   },
   {
@@ -495,6 +520,7 @@ export const songs = [
       NORMAL: 5,
       HARD: 12,
       COSMOS: 17,
+      ASTRA: [3],
     },
   },
   {
@@ -506,6 +532,7 @@ export const songs = [
       NORMAL: 7,
       HARD: 13,
       COSMOS: 17,
+      ASTRA: [3],
     },
   },
   {
@@ -517,6 +544,7 @@ export const songs = [
       NORMAL: 6,
       HARD: 13,
       COSMOS: 17,
+      ASTRA: [3],
     },
   },
   {
@@ -539,6 +567,7 @@ export const songs = [
       NORMAL: 7,
       HARD: 13,
       COSMOS: 18,
+      ASTRA: [3],
     },
   },
   {
@@ -572,6 +601,7 @@ export const songs = [
       NORMAL: 6,
       HARD: 13,
       COSMOS: 17,
+      ASTRA: [2],
     },
   },
   {
@@ -594,6 +624,7 @@ export const songs = [
       NORMAL: 5,
       HARD: 11,
       COSMOS: 16,
+      ASTRA: [1, 2],
     },
   },
   {
@@ -616,6 +647,7 @@ export const songs = [
       NORMAL: 5,
       HARD: 11,
       COSMOS: 16,
+      ASTRA: [3],
     },
   },
   {
@@ -627,6 +659,7 @@ export const songs = [
       NORMAL: 7,
       HARD: 14,
       COSMOS: 17,
+      ASTRA: [1],
     },
   },
   {
@@ -660,6 +693,7 @@ export const songs = [
       NORMAL: 7,
       HARD: 12,
       COSMOS: 18,
+      ASTRA: [3],
     },
   },
   {
@@ -671,6 +705,7 @@ export const songs = [
       NORMAL: 7,
       HARD: 13,
       COSMOS: 18,
+      ASTRA: [4],
     },
   },
   {
@@ -704,6 +739,7 @@ export const songs = [
       NORMAL: 9,
       HARD: 15,
       COSMOS: 19,
+      ASTRA: [4],
     },
   },
   {
@@ -715,6 +751,7 @@ export const songs = [
       NORMAL: 7,
       HARD: 14,
       COSMOS: 17,
+      ASTRA: [3],
     },
   },
   {
@@ -726,6 +763,7 @@ export const songs = [
       NORMAL: 7,
       HARD: 14,
       COSMOS: 18,
+      ASTRA: [3],
     },
   },
   {
@@ -737,6 +775,7 @@ export const songs = [
       NORMAL: 7,
       HARD: 12,
       COSMOS: 18,
+      ASTRA: [4],
     },
   },
   {
@@ -748,6 +787,7 @@ export const songs = [
       NORMAL: 5,
       HARD: 13,
       COSMOS: 17,
+      ASTRA: [2],
     },
   },
   {
@@ -759,6 +799,7 @@ export const songs = [
       NORMAL: 8,
       HARD: 14,
       COSMOS: 18,
+      ASTRA: [4],
     },
   },
   {
@@ -803,6 +844,7 @@ export const songs = [
       NORMAL: 6,
       HARD: 14,
       COSMOS: 17,
+      ASTRA: [2],
     },
   },
   {
@@ -814,6 +856,7 @@ export const songs = [
       NORMAL: 6,
       HARD: 12,
       COSMOS: 18,
+      ASTRA: [4],
     },
   },
   {
@@ -825,6 +868,7 @@ export const songs = [
       NORMAL: 6,
       HARD: 15,
       COSMOS: 17,
+      ASTRA: [1],
     },
   },
   {
@@ -847,6 +891,7 @@ export const songs = [
       NORMAL: 5,
       HARD: 14,
       COSMOS: 17,
+      ASTRA: [4],
     },
   },
   {
@@ -862,13 +907,14 @@ export const songs = [
   },
   {
     id: "79",
-    title: "Eschatologu",
+    title: "Eschatology",
     composer: "Tetsh & Scarlette",
     pack: "ORIGINAL",
     levels: {
       NORMAL: 6,
       HARD: 11,
       COSMOS: 18,
+      ASTRA: [3, 4],
     },
   },
   {
@@ -902,6 +948,7 @@ export const songs = [
       NORMAL: 6,
       HARD: 13,
       COSMOS: 16,
+      ASTRA: [2],
     },
   },
   {
@@ -957,6 +1004,7 @@ export const songs = [
       NORMAL: 4,
       HARD: 12,
       COSMOS: 16,
+      ASTRA: [2],
     },
   },
   {
@@ -968,6 +1016,7 @@ export const songs = [
       NORMAL: 7,
       HARD: 14,
       COSMOS: 18,
+      ASTRA: [4],
     },
   },
   {
@@ -1001,6 +1050,7 @@ export const songs = [
       NORMAL: 5,
       HARD: 12,
       COSMOS: 16,
+      ASTRA: [2],
     },
   },
   {
@@ -1056,6 +1106,7 @@ export const songs = [
       NORMAL: 8,
       HARD: 14,
       COSMOS: 18,
+      ASTRA: [4],
     },
   },
   {
@@ -1067,6 +1118,7 @@ export const songs = [
       NORMAL: 5,
       HARD: 11,
       COSMOS: 17,
+      ASTRA: [2],
     },
   },
   {
@@ -1078,6 +1130,7 @@ export const songs = [
       NORMAL: 7,
       HARD: 13,
       COSMOS: 17,
+      ASTRA: [2],
     },
   },
   {
@@ -1089,6 +1142,7 @@ export const songs = [
       NORMAL: 7,
       HARD: 14,
       COSMOS: 18,
+      ASTRA: [4],
     },
   },
   {
@@ -1100,6 +1154,7 @@ export const songs = [
       NORMAL: 7,
       HARD: 15,
       COSMOS: 18,
+      ASTRA: [4],
     },
   },
   {
@@ -1133,6 +1188,7 @@ export const songs = [
       NORMAL: 6,
       HARD: 12,
       COSMOS: 17,
+      ASTRA: [2],
     },
   },
   {
@@ -1144,6 +1200,7 @@ export const songs = [
       NORMAL: 6,
       HARD: 15,
       COSMOS: 18,
+      ASTRA: [2],
     },
   },
   {
@@ -1166,6 +1223,7 @@ export const songs = [
       NORMAL: 9,
       HARD: 15,
       COSMOS: 17,
+      ASTRA: [4],
     },
   },
   {
@@ -1177,6 +1235,7 @@ export const songs = [
       NORMAL: 7,
       HARD: 13,
       COSMOS: 18,
+      ASTRA: [3],
     },
   },
   {
@@ -1199,6 +1258,7 @@ export const songs = [
       NORMAL: 5,
       HARD: 12,
       COSMOS: 17,
+      ASTRA: [1],
     },
   },
   {
@@ -1210,6 +1270,7 @@ export const songs = [
       NORMAL: 6,
       HARD: 13,
       COSMOS: 18,
+      ASTRA: [3],
     },
   },
   {
@@ -1232,6 +1293,7 @@ export const songs = [
       NORMAL: 7,
       HARD: 13,
       COSMOS: 17,
+      ASTRA: [3, 4],
     },
   },
   {
@@ -1243,6 +1305,7 @@ export const songs = [
       NORMAL: 5,
       HARD: 11,
       COSMOS: 15,
+      ASTRA: [1],
     },
   },
   {
@@ -1276,6 +1339,7 @@ export const songs = [
       NORMAL: 1,
       HARD: 10,
       COSMOS: 16,
+      ASTRA: [1],
     },
   },
   {
@@ -1298,6 +1362,7 @@ export const songs = [
       NORMAL: 8,
       HARD: 14,
       COSMOS: 18,
+      ASTRA: [3],
     },
   },
   {
@@ -1331,6 +1396,7 @@ export const songs = [
       NORMAL: 6,
       HARD: 13,
       COSMOS: 16,
+      ASTRA: [2],
     },
   },
   {
@@ -1342,6 +1408,7 @@ export const songs = [
       NORMAL: 4,
       HARD: 11,
       COSMOS: 17,
+      ASTRA: [2],
     },
   },
   {
@@ -1386,6 +1453,7 @@ export const songs = [
       NORMAL: 8,
       HARD: 14,
       COSMOS: 19,
+      ASTRA: [4],
     },
   },
   {
@@ -1397,6 +1465,7 @@ export const songs = [
       NORMAL: 3,
       HARD: 12,
       COSMOS: 16,
+      ASTRA: [1],
     },
   },
   {
@@ -1408,6 +1477,7 @@ export const songs = [
       NORMAL: 6,
       HARD: 14,
       COSMOS: 17,
+      ASTRA: [1, 3],
     },
   },
   {
@@ -1441,6 +1511,7 @@ export const songs = [
       NORMAL: 6,
       HARD: 12,
       COSMOS: 17,
+      ASTRA: [2],
     },
   },
   {
@@ -1463,6 +1534,7 @@ export const songs = [
       NORMAL: 6,
       HARD: 12,
       COSMOS: 17,
+      ASTRA: [3],
     },
   },
   {
@@ -1474,6 +1546,7 @@ export const songs = [
       NORMAL: 4,
       HARD: 13,
       COSMOS: 16,
+      ASTRA: [2],
     },
   },
   {
@@ -1496,6 +1569,7 @@ export const songs = [
       NORMAL: 6,
       HARD: 13,
       COSMOS: 17,
+      ASTRA: [3],
     },
   },
   {
@@ -1529,6 +1603,7 @@ export const songs = [
       NORMAL: 6,
       HARD: 13,
       COSMOS: 17,
+      ASTRA: [3],
     },
   },
   {
@@ -1540,6 +1615,7 @@ export const songs = [
       NORMAL: 6,
       HARD: 12,
       COSMOS: 17,
+      ASTRA: [3],
     },
   },
   {
@@ -1617,6 +1693,7 @@ export const songs = [
       NORMAL: 7,
       HARD: 13,
       COSMOS: 17,
+      ASTRA: [2],
     },
   },
   {
@@ -1650,6 +1727,7 @@ export const songs = [
       NORMAL: 9,
       HARD: 15,
       COSMOS: 19,
+      ASTRA: [4],
     },
   },
   {
@@ -1683,6 +1761,7 @@ export const songs = [
       NORMAL: 3,
       HARD: 10,
       COSMOS: 16,
+      ASTRA: [1],
     },
   },
   {
@@ -1694,6 +1773,7 @@ export const songs = [
       NORMAL: 4,
       HARD: 13,
       COSMOS: 17,
+      ASTRA: [2],
     },
   },
   {
@@ -1705,6 +1785,7 @@ export const songs = [
       NORMAL: 5,
       HARD: 13,
       COSMOS: 17,
+      ASTRA: [1],
     },
   },
   {
@@ -1749,6 +1830,7 @@ export const songs = [
       NORMAL: 8,
       HARD: 14,
       COSMOS: 17,
+      ASTRA: [4],
     },
   },
   {
@@ -1760,6 +1842,7 @@ export const songs = [
       NORMAL: 7,
       HARD: 14,
       COSMOS: 18,
+      ASTRA: [4],
     },
   },
   {
@@ -1804,6 +1887,7 @@ export const songs = [
       NORMAL: 6,
       HARD: 11,
       COSMOS: 16,
+      ASTRA: [2],
     },
   },
   {
@@ -1826,6 +1910,7 @@ export const songs = [
       NORMAL: 8,
       HARD: 15,
       COSMOS: 18,
+      ASTRA: [4],
     },
   },
   {
@@ -1859,6 +1944,7 @@ export const songs = [
       NORMAL: 4,
       HARD: 13,
       COSMOS: 16,
+      ASTRA: [3],
     },
   },
   {
@@ -1881,6 +1967,7 @@ export const songs = [
       NORMAL: 4,
       HARD: 10,
       COSMOS: 16,
+      ASTRA: [2],
     },
   },
   {
@@ -1892,6 +1979,7 @@ export const songs = [
       NORMAL: 7,
       HARD: 14,
       COSMOS: 18,
+      ASTRA: [4],
     },
   },
   {
@@ -1903,6 +1991,7 @@ export const songs = [
       NORMAL: 7,
       HARD: 13,
       COSMOS: 17,
+      ASTRA: [2],
     },
   },
   {
@@ -1936,6 +2025,7 @@ export const songs = [
       NORMAL: 5,
       HARD: 12,
       COSMOS: 17,
+      ASTRA: [1],
     },
   },
   {
@@ -1969,6 +2059,7 @@ export const songs = [
       NORMAL: 7,
       HARD: 13,
       COSMOS: 18,
+      ASTRA: [3],
     },
   },
   {
@@ -1980,6 +2071,7 @@ export const songs = [
       NORMAL: 5,
       HARD: 13,
       COSMOS: 17,
+      ASTRA: [2],
     },
   },
   {
@@ -1991,6 +2083,7 @@ export const songs = [
       NORMAL: 5,
       HARD: 13,
       COSMOS: 17,
+      ASTRA: [3],
     },
   },
   {
@@ -2013,6 +2106,7 @@ export const songs = [
       NORMAL: 7,
       HARD: 15,
       COSMOS: 18,
+      ASTRA: [4],
     },
   },
   {
@@ -2024,6 +2118,7 @@ export const songs = [
       NORMAL: 4,
       HARD: 12,
       COSMOS: 16,
+      ASTRA: [1],
     },
   },
   {
@@ -2035,6 +2130,7 @@ export const songs = [
       NORMAL: 8,
       HARD: 14,
       COSMOS: 19,
+      ASTRA: [4],
     },
   },
   {
@@ -2068,6 +2164,7 @@ export const songs = [
       NORMAL: 4,
       HARD: 13,
       COSMOS: 16,
+      ASTRA: [1],
     },
   },
   {
@@ -2101,6 +2198,7 @@ export const songs = [
       NORMAL: 7,
       HARD: 12,
       COSMOS: 17,
+      ASTRA: [3],
     },
   },
   {
@@ -2112,6 +2210,7 @@ export const songs = [
       NORMAL: 7,
       HARD: 13,
       COSMOS: 18,
+      ASTRA: [4],
     },
   },
   {
@@ -2123,6 +2222,7 @@ export const songs = [
       NORMAL: 7,
       HARD: 14,
       COSMOS: 18,
+      ASTRA: [3],
     },
   },
   {
@@ -2134,6 +2234,7 @@ export const songs = [
       NORMAL: 6,
       HARD: 12,
       COSMOS: 17,
+      ASTRA: [3],
     },
   },
   {
@@ -2167,6 +2268,7 @@ export const songs = [
       NORMAL: 5,
       HARD: 14,
       COSMOS: 17,
+      ASTRA: [2],
     },
   },
   {
@@ -2178,6 +2280,7 @@ export const songs = [
       NORMAL: 6,
       HARD: 14,
       COSMOS: 17,
+      ASTRA: [3],
     },
   },
   {
@@ -2189,6 +2292,7 @@ export const songs = [
       NORMAL: 9,
       HARD: 15,
       COSMOS: 19,
+      ASTRA: [4],
     },
   },
   {
@@ -2200,6 +2304,7 @@ export const songs = [
       NORMAL: 7,
       HARD: 14,
       COSMOS: 18,
+      ASTRA: [4],
     },
   },
   {
@@ -2222,6 +2327,7 @@ export const songs = [
       NORMAL: 8,
       HARD: 13,
       COSMOS: 17,
+      ASTRA: [2],
     },
   },
   {
@@ -2233,6 +2339,7 @@ export const songs = [
       NORMAL: 8,
       HARD: 15,
       COSMOS: 18,
+      ASTRA: [3],
     },
   },
   {
@@ -2266,6 +2373,7 @@ export const songs = [
       NORMAL: 4,
       HARD: 11,
       COSMOS: 16,
+      ASTRA: [1],
     },
   },
   {
@@ -2288,6 +2396,7 @@ export const songs = [
       NORMAL: 3,
       HARD: 11,
       COSMOS: 16,
+      ASTRA: [1],
     },
   },
   {
@@ -2310,6 +2419,7 @@ export const songs = [
       NORMAL: 5,
       HARD: 12,
       COSMOS: 17,
+      ASTRA: [4],
     },
   },
   {
@@ -2321,6 +2431,7 @@ export const songs = [
       NORMAL: 7,
       HARD: 13,
       COSMOS: 18,
+      ASTRA: [3],
     },
   },
   {
@@ -2332,6 +2443,7 @@ export const songs = [
       NORMAL: 4,
       HARD: 11,
       COSMOS: 17,
+      ASTRA: [2],
     },
   },
   {
@@ -2365,6 +2477,7 @@ export const songs = [
       NORMAL: 6,
       HARD: 14,
       COSMOS: 17,
+      ASTRA: [2],
     },
   },
   {
@@ -2376,6 +2489,7 @@ export const songs = [
       NORMAL: 7,
       HARD: 13,
       COSMOS: 17,
+      ASTRA: [4],
     },
   },
   {
@@ -2398,6 +2512,7 @@ export const songs = [
       NORMAL: 6,
       HARD: 13,
       COSMOS: 17,
+      ASTRA: [2],
     },
   },
   {
@@ -2409,6 +2524,7 @@ export const songs = [
       NORMAL: 2,
       HARD: 13,
       COSMOS: 19,
+      ASTRA: [3],
     },
   },
   {
@@ -2420,6 +2536,7 @@ export const songs = [
       NORMAL: 7,
       HARD: 13,
       COSMOS: 17,
+      ASTRA: [2],
     },
   },
   {
@@ -2431,6 +2548,7 @@ export const songs = [
       NORMAL: 5,
       HARD: 13,
       COSMOS: 17,
+      ASTRA: [2],
     },
   },
   {
@@ -2475,6 +2593,7 @@ export const songs = [
       NORMAL: 7,
       HARD: 13,
       COSMOS: 18,
+      ASTRA: [4],
     },
   },
   {
@@ -2486,6 +2605,7 @@ export const songs = [
       NORMAL: 1,
       HARD: 11,
       COSMOS: 16,
+      ASTRA: [1],
     },
   },
   {
@@ -2508,6 +2628,7 @@ export const songs = [
       NORMAL: 7,
       HARD: 15,
       COSMOS: 18,
+      ASTRA: [4],
     },
   },
   {
@@ -2519,6 +2640,7 @@ export const songs = [
       NORMAL: 8,
       HARD: 12,
       COSMOS: 17,
+      ASTRA: [3],
     },
   },
   {
@@ -2530,6 +2652,7 @@ export const songs = [
       NORMAL: 7,
       HARD: 13,
       COSMOS: 16,
+      ASTRA: [2],
     },
   },
   {
@@ -2541,6 +2664,7 @@ export const songs = [
       NORMAL: 5,
       HARD: 11,
       COSMOS: 16,
+      ASTRA: [2],
     },
   },
   {
@@ -2552,6 +2676,7 @@ export const songs = [
       NORMAL: 6,
       HARD: 15,
       COSMOS: 17,
+      ASTRA: [3],
     },
   },
   {
@@ -2563,6 +2688,7 @@ export const songs = [
       NORMAL: 7,
       HARD: 14,
       COSMOS: 17,
+      ASTRA: [2],
     },
   },
   {
@@ -2574,6 +2700,7 @@ export const songs = [
       NORMAL: 5,
       HARD: 11,
       COSMOS: 16,
+      ASTRA: [2],
     },
   },
   {
@@ -2607,6 +2734,7 @@ export const songs = [
       NORMAL: 5,
       HARD: 13,
       COSMOS: 16,
+      ASTRA: [1],
     },
   },
   {
@@ -2618,6 +2746,7 @@ export const songs = [
       NORMAL: 6,
       HARD: 14,
       COSMOS: 18,
+      ASTRA: [3],
     },
   },
   {
@@ -2662,6 +2791,7 @@ export const songs = [
       NORMAL: 4,
       HARD: 14,
       COSMOS: 17,
+      ASTRA: [3],
     },
   },
   {
@@ -2684,6 +2814,7 @@ export const songs = [
       NORMAL: 6,
       HARD: 12,
       COSMOS: 16,
+      ASTRA: [2],
     },
   },
   {
@@ -2706,6 +2837,7 @@ export const songs = [
       NORMAL: 6,
       HARD: 13,
       COSMOS: 17,
+      ASTRA: [2],
     },
   },
   {
@@ -2717,6 +2849,7 @@ export const songs = [
       NORMAL: 8,
       HARD: 15,
       COSMOS: 19,
+      ASTRA: [4],
     },
   },
   {
@@ -2739,6 +2872,7 @@ export const songs = [
       NORMAL: 8,
       HARD: 15,
       COSMOS: 19,
+      ASTRA: [4],
     },
   },
   {
@@ -2750,6 +2884,7 @@ export const songs = [
       NORMAL: 8,
       HARD: 14,
       COSMOS: 18,
+      ASTRA: [3],
     },
   },
   {
@@ -2783,6 +2918,7 @@ export const songs = [
       NORMAL: 5,
       HARD: 11,
       COSMOS: 16,
+      ASTRA: [2],
     },
   },
   {
@@ -2794,6 +2930,7 @@ export const songs = [
       NORMAL: 8,
       HARD: 15,
       COSMOS: 17,
+      ASTRA: [4],
     },
   },
   {
@@ -2805,6 +2942,7 @@ export const songs = [
       NORMAL: 4,
       HARD: 14,
       COSMOS: 17,
+      ASTRA: [4],
     },
   },
   {
@@ -2816,6 +2954,7 @@ export const songs = [
       NORMAL: 5,
       HARD: 14,
       COSMOS: 17,
+      ASTRA: [3],
     },
   },
   {
@@ -2827,6 +2966,7 @@ export const songs = [
       NORMAL: 5,
       HARD: 12,
       COSMOS: 17,
+      ASTRA: [2],
     },
   },
   {
@@ -2838,6 +2978,7 @@ export const songs = [
       NORMAL: 8,
       HARD: 12,
       COSMOS: 17,
+      ASTRA: [3],
     },
   },
   {
@@ -2849,6 +2990,7 @@ export const songs = [
       NORMAL: 7,
       HARD: 12,
       COSMOS: 17,
+      ASTRA: [3],
     },
   },
   {
@@ -2860,6 +3002,7 @@ export const songs = [
       NORMAL: 5,
       HARD: 13,
       COSMOS: 17,
+      ASTRA: [2],
     },
   },
   {
@@ -2882,6 +3025,7 @@ export const songs = [
       NORMAL: 9,
       HARD: 14,
       COSMOS: 19,
+      ASTRA: [3],
     },
   },
   {
@@ -2915,6 +3059,7 @@ export const songs = [
       NORMAL: 8,
       HARD: 15,
       COSMOS: 19,
+      ASTRA: [4],
     },
   },
   {
@@ -2926,6 +3071,7 @@ export const songs = [
       NORMAL: 9,
       HARD: 15,
       COSMOS: 19,
+      ASTRA: [4],
     },
   },
   {
@@ -2992,6 +3138,7 @@ export const songs = [
       NORMAL: 6,
       HARD: 14,
       COSMOS: 17,
+      ASTRA: [3],
     },
   },
   {
@@ -3003,6 +3150,7 @@ export const songs = [
       NORMAL: 4,
       HARD: 11,
       COSMOS: 16,
+      ASTRA: [2],
     },
   },
   {
@@ -3113,6 +3261,7 @@ export const songs = [
       NORMAL: 7,
       HARD: 13,
       COSMOS: 18,
+      ASTRA: [3],
     },
   },
   {
@@ -3124,6 +3273,7 @@ export const songs = [
       NORMAL: 10,
       HARD: 15,
       COSMOS: 19,
+      ASTRA: [4],
     },
   },
   {
@@ -3135,6 +3285,7 @@ export const songs = [
       NORMAL: 6,
       HARD: 12,
       COSMOS: 17,
+      ASTRA: [2],
     },
   },
   {
@@ -3146,6 +3297,7 @@ export const songs = [
       NORMAL: 8,
       HARD: 14,
       COSMOS: 18,
+      ASTRA: [3],
     },
   },
   {
@@ -3157,6 +3309,7 @@ export const songs = [
       NORMAL: 7,
       HARD: 12,
       COSMOS: 17,
+      ASTRA: [2],
     },
   },
   {
@@ -3168,6 +3321,7 @@ export const songs = [
       NORMAL: 8,
       HARD: 12,
       COSMOS: 17,
+      ASTRA: [1],
     },
   },
   {
@@ -3179,6 +3333,7 @@ export const songs = [
       NORMAL: 10,
       HARD: 15,
       COSMOS: 19,
+      ASTRA: [4],
     },
   },
   {
@@ -3190,6 +3345,7 @@ export const songs = [
       NORMAL: 5,
       HARD: 11,
       COSMOS: 16,
+      ASTRA: [1],
     },
   },
   {
@@ -3201,6 +3357,7 @@ export const songs = [
       NORMAL: 6,
       HARD: 11,
       COSMOS: 17,
+      ASTRA: [3],
     },
   },
   {
@@ -3212,6 +3369,7 @@ export const songs = [
       NORMAL: 6,
       HARD: 11,
       COSMOS: 18,
+      ASTRA: [2],
     },
   },
   {
@@ -3223,6 +3381,7 @@ export const songs = [
       NORMAL: 7,
       HARD: 13,
       COSMOS: 17,
+      ASTRA: [2],
     },
   },
 ] as const satisfies readonly Song[];

@@ -4,6 +4,7 @@ import type { Song } from "./domain/song";
 import {
   getCandidates,
   getMatchingCharts,
+  getSongCharts,
   pickRandomCandidate,
   pickRandomCandidates,
   type SongFilters,
@@ -15,7 +16,7 @@ const sampleSongs = [
     title: "Alpha Song",
     composer: "Composer A",
     pack: "Pack 1",
-    levels: { NORMAL: 4, HARD: 10, COSMOS: 17, ASTRA: 2 },
+    levels: { NORMAL: 4, HARD: 10, COSMOS: 17, ASTRA: [1, 3] },
   },
   {
     id: "beta",
@@ -67,6 +68,14 @@ describe("getCandidates", () => {
     assert.deepEqual(result.map(({ song }) => song.id), ["alpha"]);
   });
 
+  it("複数ASTRAの曲を1曲として数え、BANで全譜面を除外する", () => {
+    const filters: SongFilters = { ...emptyFilters, difficulties: ["ASTRA"] };
+    const result = getCandidates(sampleSongs, filters);
+    assert.equal(result.length, 1);
+    assert.equal(result[0].charts.length, 2);
+    assert.deepEqual(getCandidates(sampleSongs, filters, new Set(["alpha"])), []);
+  });
+
   it("BANした曲を候補から除外する", () => {
     const result = getCandidates(sampleSongs, emptyFilters, new Set(["alpha"]));
     assert.deepEqual(result.map(({ song }) => song.id), ["beta"]);
@@ -74,6 +83,21 @@ describe("getCandidates", () => {
 });
 
 describe("getMatchingCharts", () => {
+  it("同じ曲のASTRAをそれぞれの星数で絞り込む", () => {
+    for (const level of [1, 3]) {
+      assert.deepEqual(getMatchingCharts(sampleSongs[0], {
+        ...emptyFilters,
+        difficulties: ["ASTRA"],
+        levels: [level],
+      }), [{ difficulty: "ASTRA", level }]);
+    }
+    assert.deepEqual(getMatchingCharts(sampleSongs[0], {
+      ...emptyFilters,
+      difficulties: ["ASTRA"],
+      levels: [2],
+    }), []);
+  });
+
   it("複数レベルに一致する譜面をすべて返す", () => {
     const charts = getMatchingCharts(sampleSongs[0], {
       ...emptyFilters,
@@ -86,7 +110,33 @@ describe("getMatchingCharts", () => {
   });
 });
 
+describe("getSongCharts", () => {
+  it("通常3譜面と複数ASTRAを入力順に展開する", () => {
+    assert.deepEqual(getSongCharts(sampleSongs[0]), [
+      { difficulty: "NORMAL", level: 4 },
+      { difficulty: "HARD", level: 10 },
+      { difficulty: "COSMOS", level: 17 },
+      { difficulty: "ASTRA", level: 1 },
+      { difficulty: "ASTRA", level: 3 },
+    ]);
+  });
+
+  it("ASTRAが1譜面だけの曲にも対応する", () => {
+    const song: Song = { ...sampleSongs[0], levels: { ...sampleSongs[0].levels, ASTRA: [2] } };
+    assert.deepEqual(getSongCharts(song).at(-1), { difficulty: "ASTRA", level: 2 });
+  });
+});
+
 describe("pickRandomCandidate", () => {
+  it("複数ASTRAのどちらも抽選できる", () => {
+    const candidates = getCandidates(sampleSongs, { ...emptyFilters, difficulties: ["ASTRA"] });
+    for (const [chartRandom, level] of [[0, 1], [0.99, 3]]) {
+      const values = [0, chartRandom];
+      const result = pickRandomCandidate(candidates, () => values.shift() ?? 0);
+      assert.deepEqual(result?.chart, { difficulty: "ASTRA", level });
+    }
+  });
+
   it("曲を選んでから、その曲の一致譜面を選ぶ", () => {
     const candidates = getCandidates(sampleSongs, emptyFilters);
     const values = [0.75, 0.4];

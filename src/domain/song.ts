@@ -31,11 +31,11 @@ export type AstraStar = 1 | 2 | 3 | 4;
 
 /**
  * 曲ごとの譜面レベル。
- * 通常3難易度は必須、ASTRAは存在する曲だけ指定する。
+ * 通常3難易度は必須、ASTRAは存在する曲だけ譜面ごとの星数を指定する。
  */
 export type SongLevels = Readonly<
   Record<StandardDifficulty, SongLevel> & {
-    ASTRA?: AstraStar;
+    ASTRA?: readonly AstraStar[];
   }
 >;
 

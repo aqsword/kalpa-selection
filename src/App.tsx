@@ -446,8 +446,8 @@ function App() {
                         <p>{song.composer}</p>
                       </div>
                       <div className="chart-list" aria-label={`${song.title}の譜面`}>
-                        {getSongCharts(song).map((chart) => (
-                          <span className={`chart-item chart-${chart.difficulty.toLowerCase()}`} key={chart.difficulty}>
+                        {getSongCharts(song).map((chart, index) => (
+                          <span className={`chart-item chart-${chart.difficulty.toLowerCase()}`} key={`${chart.difficulty}-${index}`}>
                             <small>{chart.difficulty}</small>
                             <strong>{chart.difficulty === "ASTRA" ? "★" : ""}{chart.level}</strong>
                           </span>
@@ -490,8 +490,8 @@ function App() {
                     <p>{song.composer}</p>
                   </div>
                   <div className="chart-list" aria-label={`${song.title}の譜面`}>
-                    {getSongCharts(song).map((chart) => (
-                      <span className={`chart-item chart-${chart.difficulty.toLowerCase()}`} key={chart.difficulty}>
+                    {getSongCharts(song).map((chart, index) => (
+                      <span className={`chart-item chart-${chart.difficulty.toLowerCase()}`} key={`${chart.difficulty}-${index}`}>
                         <small>{chart.difficulty}</small>
                         <strong>{chart.difficulty === "ASTRA" ? "★" : ""}{chart.level}</strong>
                       </span>

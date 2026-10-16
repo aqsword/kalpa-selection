@@ -1,6 +1,7 @@
 import { access, mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { readSheet } from "read-excel-file/node";
+import { parseAstraStars } from "./parse-astra";
 
 const EXPECTED_HEADERS = [
   "id",
@@ -21,7 +22,7 @@ type ConvertedSong = {
   normal: number;
   hard: number;
   cosmos: number;
-  astra?: number;
+  astra?: readonly number[];
 };
 
 function isBlank(value: unknown): boolean {
@@ -71,7 +72,7 @@ function readInteger(
 
 function toTypeScript(songs: readonly ConvertedSong[]): string {
   const entries = songs.map((song) => {
-    const astraLine = song.astra === undefined ? "" : `\n      ASTRA: ${song.astra},`;
+    const astraLine = song.astra === undefined ? "" : `\n      ASTRA: [${song.astra.join(", ")}],`;
 
     return `  {
     id: ${JSON.stringify(song.id)},
@@ -154,7 +155,12 @@ async function main(): Promise<void> {
     const normal = readInteger(row[4], "NORMAL", rowNumber, 1, 20, errors);
     const hard = readInteger(row[5], "HARD", rowNumber, 1, 20, errors);
     const cosmos = readInteger(row[6], "COSMOS", rowNumber, 1, 20, errors);
-    const astra = readInteger(row[7], "ASTRA", rowNumber, 1, 4, errors, true);
+    let astra: ReturnType<typeof parseAstraStars>;
+    try {
+      astra = parseAstraStars(row[7]);
+    } catch (error) {
+      errors.push(`${rowNumber}行目: ${(error as Error).message}`);
+    }
 
     if (id && !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(id)) {
       errors.push(

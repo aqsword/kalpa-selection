@@ -9,7 +9,7 @@ const validSong = {
     NORMAL: 1,
     HARD: 10,
     COSMOS: 20,
-    ASTRA: 4,
+    ASTRA: [1, 4],
   },
 } as const satisfies Song;
 
@@ -48,7 +48,7 @@ const invalidAstraStar = {
     HARD: 10,
     COSMOS: 20,
     // @ts-expect-error ASTRAの星5は許可しない
-    ASTRA: 5,
+    ASTRA: [5],
   },
 } as const satisfies Song;
 
